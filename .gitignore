@@ -39,3 +39,12 @@ nosetests.xml
 *.npz
 *.npy
 *.pkl
+
+# for MAC
+.DS_Store
+*~
+[#].[#]
+.[#]*
+*[#]
+*.pyc
+*.h5
