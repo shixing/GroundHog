@@ -162,7 +162,7 @@ class SGD(object):
     def __call__(self):
         batch = self.data.next()
         assert batch
-
+        
         # Perturb the data (! and the model)
         if isinstance(batch, dict):
             batch = self.model.perturb(**batch)
@@ -177,6 +177,10 @@ class SGD(object):
         else:
             for gdata, data in zip(self.gdata, batch):
                 gdata.set_value(data, borrow=True)
+
+        total_source_words = numpy.sum(batch['x_mask'])
+        total_target_words = numpy.sum(batch['y_mask'])
+
         # Run the trianing function
         g_st = time.time()
         rvals = self.train_fn()
@@ -198,11 +202,14 @@ class SGD(object):
             vals += [print_time(g_ed - g_st),
                      print_time(time.time() - self.step_timer),
                      float(self.lr)]
-            print msg % tuple(vals)
+            logger.info(msg % tuple(vals))
         self.step += 1
         ret = dict([('cost', float(cost)),
                     ('error', float(cost)),
                        ('lr', float(self.lr)),
                        ('time_step', float(g_ed - g_st)),
-                       ('whole_time', float(whole_time))]+zip(self.prop_names, rvals))
+                       ('whole_time', float(whole_time)),
+                        ('total_source_words',float(total_source_words)),
+                        ('total_target_words',float(total_target_words))
+                        ]+zip(self.prop_names, rvals))
         return ret

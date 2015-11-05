@@ -4,7 +4,7 @@ def prototype_state():
     # Random seed
     state['seed'] = 1234
     # Logging level
-    state['level'] = 'DEBUG'
+    state['level'] = 'INFO'
 
     # ----- DATA -----
     # (all Nones in this section are placeholders for required values)
@@ -257,7 +257,7 @@ def prototype_encdec_state():
     state['n_sym_target'] = state['null_sym_target'] + 1
 
     state['seqlen'] = 30
-    state['bs']  = 80
+    state['bs']  = 50
 
     state['dim'] = 1000
     state['rank_n_approx'] = 620
@@ -278,7 +278,7 @@ def prototype_search_state():
     state['forward'] = True
     state['backward'] = True
     state['seqlen'] = 50
-    state['sort_k_batches'] = 20
+    state['sort_k_batches'] = 7
     state['prefix'] = 'search_'
 
     return state
@@ -301,9 +301,9 @@ def prototype_phrase_lstm_state():
 def prototype_en_zh():
     state = prototype_search_state()
 
-    #dir_path = "/home/nlg-05/xingshi/workspace/misc/lstm/GroundHog/experiments/nmt/preprocess/"
+    dir_path = "/home/nlg-05/xingshi/workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
 
-    dir_path = "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt/preprocess/"
+    #dir_path = "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
 
     state['target'] = [dir_path+"btext.zh.shuf.h5"]
     state['source'] = [dir_path+"btext.en.shuf.h5"]
@@ -319,7 +319,14 @@ def prototype_en_zh():
 
     state['prefix'] = 'search_zh_'
 
-    state['nWorkers'] = 3
+    # to keep balance, this number K should be a prime. 
+    # you should have N workers which is prime to K
+    # each worker should proceed M steps, where M = n * K. 
+    state['sort_k_batches'] = 7
+    state['nWorkers'] = 8
     state['nBatch_per_step'] = 7
+
+
+
 
     return state

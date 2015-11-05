@@ -60,7 +60,7 @@ def parse_args():
     parser.add_argument("changes",  nargs="*", help="Changes to state", default="")
     return parser.parse_args()
 
-def compile(isMaster=False):
+def compile(ip,isMaster=False):
     # compile the model
 
     # context maintains all the necessary variables needed during the training.
@@ -78,7 +78,7 @@ def compile(isMaster=False):
     for change in args.changes:
         state.update(eval("dict({})".format(change)))
 
-    logging.basicConfig(level=getattr(logging, state['level']), format="%(asctime)s: %(name)s: %(levelname)s: %(message)s")
+    logging.root.setLevel(getattr(logging, state['level']))
     logger.debug("State:\n{}".format(pprint.pformat(state)))
 
     rng = numpy.random.RandomState(state['seed'])
@@ -134,5 +134,3 @@ def get_parameter(context):
     return vals
 
 
-def train_batches(context,nbatch):
-    pass

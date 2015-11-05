@@ -141,6 +141,8 @@ def get_batch_iterator(state):
                 self.nWorkers = state['nWorkers']
             else:
                 self.nWorkers = 1
+            self.batch_index = -1
+            self.init_move = False
 
         def get_homogenous_batch_iter(self):
             while True:
@@ -157,9 +159,22 @@ def get_batch_iterator(state):
                     batch = create_padded_batch(state, [x[indices]], [y[indices]],
                             return_dict=True)
                     if batch:
+                        self.batch_index += 1
                         yield batch
 
-        def next(self, peek=False):
+        def next(self,peek=False):
+            batch = None
+            if not self.init_move:
+                self.init_move = True
+                batch =  self.next_step(1,peek=peek)
+            else:
+                batch = self.next_step(self.nWorkers,peek=peek) 
+
+            shape = batch['x'].shape
+            logger.debug('Provide batch {} shape {}'.format(self.batch_index,shape))
+            return batch
+
+        def next_step(self, step, peek=False):
             if not self.batch_iter:
                 self.batch_iter = self.get_homogenous_batch_iter()
 
@@ -174,11 +189,12 @@ def get_batch_iterator(state):
             if not self.batch_iter:
                 raise StopIteration
 
-            batch = next(self.batch_iter)
-            for i in xrange(self.nWorkers - 1):
+            batch = None
+            for i in xrange(step):
                 batch = next(self.batch_iter)
             if peek:
                 self.peeked_batch = batch
+
             return batch
 
     train_data = Iterator(

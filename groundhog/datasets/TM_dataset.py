@@ -185,8 +185,6 @@ class PytablesBitextFetcher(threading.Thread):
 
         offset = self.start_offset
 
-        offset = offset % data_len
-
         if offset == -1:
             offset = 0
             if diter.shuffle:
@@ -244,7 +242,6 @@ class PytablesBitextIterator(object):
         self.exit_flag = False
 
     def start(self, start_offset):
-        print "haha start"
         self.queue = Queue.Queue(maxsize=self.queue_size)
         self.gather = PytablesBitextFetcher(self, start_offset)
         self.gather.daemon = True

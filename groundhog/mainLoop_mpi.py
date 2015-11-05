@@ -281,8 +281,8 @@ class MainLoop_mpi(object):
         self.state['clr'] = self.state['lr']
         self.train_data.start(self.timings['next_offset']
                 if 'next_offset' in self.timings
-                else 0)
-
+                else -1)
+        
         train_context['last_cost'] = last_cost
 
         return train_context
@@ -296,6 +296,10 @@ class MainLoop_mpi(object):
         interrupt = False
         stop = False
         ibatch = 0
+        
+        total_source_words = 0
+        total_target_words = 0
+
         for ibatch in xrange(n_batches):
             if not (self.step < self.state['loopIters'] and
                     last_cost > .1*self.state['minerr'] and
@@ -316,7 +320,13 @@ class MainLoop_mpi(object):
                 self.state['traincost'] = float(rvals['cost'])
                 self.state['step'] = self.step
                 last_cost = rvals['cost']
+
+                total_source_words += rvals['total_source_words']
+                total_target_words += rvals['total_target_words']
+
                 for name in rvals.keys():
+                    if name == 'total_source_words' or name == 'total_target_words':
+                        continue
                     self.timings[name][self.step] = float(numpy.array(rvals[name]))
                 if self.l2_params:
                     for param in self.model.params:
@@ -371,7 +381,7 @@ class MainLoop_mpi(object):
                 interrupt = True
                 break
 
-        return (stop,interrupt)
+        return (stop,interrupt,total_source_words,total_target_words)
 
     def after_train_master(self,train_context):
 
@@ -387,9 +397,6 @@ class MainLoop_mpi(object):
         print "Average step took {}".format(avg_step)
         print "That amounts to {} sentences in a day".format(1 / avg_step * 86400 * self.state['bs'])
         print "Average log2 per example is {}".format(avg_cost2expl)
-
-
-
     
     ######## For Worker #########
 
@@ -408,9 +415,10 @@ class MainLoop_mpi(object):
         # TODO to change it. 
         last_cost = 1.
         self.state['clr'] = self.state['lr']
-        self.train_data.start(self.timings['next_offset'] + workerID
+        self.train_data.start(self.timings['next_offset']
                 if 'next_offset' in self.timings
-                else 0)
+                else -1)
+        self.train_data.next_step(workerID)
 
         train_context['last_cost'] = last_cost
 
@@ -422,11 +430,17 @@ class MainLoop_mpi(object):
         last_cost = train_context['last_cost']
 
         success = True
+        total_source_words = 0
+        total_target_words = 0
+
         for i in xrange(n_batches):
             rvals = self.algo()
             self.state['traincost'] = float(rvals['cost'])
             self.state['step'] = self.step
             
+            total_source_words += rvals['total_source_words']
+            total_target_words += rvals['total_target_words']
+
             last_cost = rvals['cost']
                 
             if (numpy.isinf(rvals['cost']) or
@@ -438,7 +452,7 @@ class MainLoop_mpi(object):
                 success = False
                 break
 
-        return success
+        return (success,total_source_words,total_target_words)
 
 
     def main(self):

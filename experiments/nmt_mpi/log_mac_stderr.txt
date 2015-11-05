@@ -1,0 +1,97 @@
+Vendor:  Continuum Analytics, Inc.
+Package: mkl
+Message: trial mode expires in 24 days
+Vendor:  Continuum Analytics, Inc.
+Package: mkl
+Message: trial mode expires in 24 days
+Vendor:  Continuum Analytics, Inc.
+Package: mkl
+Message: trial mode expires in 24 days
+Vendor:  Continuum Analytics, Inc.
+Package: mkl
+Message: trial mode expires in 24 days
+2015-11-05 15:39:47,270: xingshi:0 __main__: INFO: I am master with rank 0 on xingshi.
+2015-11-05 15:39:47,289: xingshi:2 __main__: INFO: I am a worker with rank 2 on xingshi.
+2015-11-05 15:39:47,291: xingshi:1 __main__: INFO: I am a worker with rank 1 on xingshi.
+2015-11-05 15:39:47,385: xingshi:3 __main__: INFO: I am a worker with rank 3 on xingshi.
+2015-11-05 15:39:47,385: xingshi:0 __main__: INFO: All workers are READY!
+Traceback (most recent call last):
+  File "asyn_mpi.py", line 192, in <module>
+    worker()
+  File "asyn_mpi.py", line 162, in worker
+    context = train_mpi.compile(name+":"+str(rank))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/train_mpi.py", line 91, in compile
+    Traceback (most recent call last):
+enc_dec.build()
+  File "asyn_mpi.py", line 192, in <module>
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 1373, in build
+    worker()
+  File "asyn_mpi.py", line 162, in worker
+    context = train_mpi.compile(name+":"+str(rank))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/train_mpi.py", line 91, in compile
+    enc_dec.build()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 1373, in build
+    self.decoder.create_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 857, in create_layers
+    self.decoder.create_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 857, in create_layers
+    self._create_transition_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 680, in _create_transition_layers
+    self._create_transition_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 680, in _create_transition_layers
+    **add_args))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 265, in __init__
+    self._init_params()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 297, in _init_params
+    **add_args))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 265, in __init__
+    self._init_params()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 297, in _init_params
+    rng=self.rng),
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/utils/utils.py", line 117, in sample_weights_classic
+    rng=self.rng),
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/utils/utils.py", line 117, in sample_weights_classic
+    perm = rng.permutation(sizeY)
+KeyboardInterrupt
+    perm = rng.permutation(sizeY)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "asyn_mpi.py", line 192, in <module>
+    worker()
+  File "asyn_mpi.py", line 162, in worker
+    context = train_mpi.compile(name+":"+str(rank))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/train_mpi.py", line 91, in compile
+    enc_dec.build()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 1373, in build
+    self.decoder.create_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 857, in create_layers
+Traceback (most recent call last):
+    self._create_transition_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 680, in _create_transition_layers
+  File "asyn_mpi.py", line 190, in <module>
+    **add_args))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 265, in __init__
+    self._init_params()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 297, in _init_params
+    rng=self.rng),
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/utils/utils.py", line 117, in sample_weights_classic
+    perm = rng.permutation(sizeY)
+KeyboardInterrupt
+    master()
+  File "asyn_mpi.py", line 59, in master
+    context = train_mpi.compile(name+":0",isMaster=True)
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/train_mpi.py", line 91, in compile
+    enc_dec.build()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 1334, in build
+    self.encoder.create_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 707, in create_layers
+    self._create_transition_layers()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/encdec.py", line 680, in _create_transition_layers
+    **add_args))
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/layers/rec_layers.py", line 975, in __init__
+    self._init_params()
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/layers/rec_layers.py", line 983, in _init_params
+    rng=self.rng),
+  File "/Users/xingshi/Workspace/misc/lstm/GroundHog/groundhog/utils/utils.py", line 134, in sample_weights_orth
+    perm = rng.permutation(sizeY)
+KeyboardInterrupt

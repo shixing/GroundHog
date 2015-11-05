@@ -1,6 +1,11 @@
+
 from mpi4py import MPI
 
+
+import logging
 import train_mpi
+import time
+
 
 def enum(*sequential, **named):
     """
@@ -9,16 +14,22 @@ def enum(*sequential, **named):
     enums = dict(zip(sequential, range(len(sequential))), **named)
     return type('Enum', (), enums)
 
-
 # Define MPI message tags
 tags = enum('READY', 'COMPILE', 'BEFORE_TRAIN','TRAIN_BATCHES', 'DONE', 'EXIT')
+
 
 # Initializations and preliminaries
 comm = MPI.COMM_WORLD   # get MPI communicator object
 size = comm.size        # total number of processes
 rank = comm.rank        # rank of this process
 status = MPI.Status()   # get MPI status object
-name = MPI.Get_processor_name()
+
+
+
+logger = logging.getLogger(__name__)
+
+
+
 
 def synchronize_tag(tag):
     for i in xrange(1,size):
@@ -31,23 +42,25 @@ def broadcast_tag(data,tag):
         comm.send(data,dest=i,tag=tag)
 
 def master():
-    name = MPI.Get_processor_name()
 
-    print("I am master with rank %d on %s." % (rank,name))
+    name = MPI.Get_processor_name()
+    logging.basicConfig(level=logging.INFO,format="%(asctime)s: "+name+":0"+" %(name)s: %(levelname)s: %(message)s")
+    logger.info("I am master with rank %d on %s." % (rank,name))
+
 
     # get all the workers READY signal
     synchronize_tag(tags.READY)
-    print('All workers are READY!')
+    logger.info("All workers are READY!")
     
     #### COMPILE ####
 
     broadcast_tag(None,tags.COMPILE)
 
-    context = train_mpi.compile(isMaster=True)
+    context = train_mpi.compile(name+":0",isMaster=True)
     mainloop = context['mainloop']
 
     synchronize_tag(tags.DONE)
-    print('All workers COMPILE done!')
+    logger.info('All workers COMPILE done!')
     
 
     #### Train #####
@@ -58,18 +71,29 @@ def master():
     train_context = mainloop.before_train_master()
     synchronize_tag(tags.DONE)
 
+    source_words = 0
+    target_words = 0
+    start_time = time.time()
     vals = None
     while True:
         # broadcast values and send to each child
+        round_start_time = time.time()
+
+        round_source_words = 0
+        round_target_words = 0
+
         if vals == None:
             vals = train_mpi.get_parameter(context)
 
+        bstart = time.time()
         broadcast_tag(vals,tags.TRAIN_BATCHES)
-        stop,interrupt = mainloop.train_batches_master(train_context)
+        bend = time.time()
+        logger.info('Broadcast Parameters to {} nodes cost {} seconds'.format(size-1,bend-bstart))
 
+        stop,interrupt,tsw,ttw = mainloop.train_batches_master(train_context)
         
-        if stop:
-            break
+        round_source_words += tsw
+        round_target_words += ttw
 
         if interrupt:
             mainloop.after_train_master(train_context)
@@ -78,23 +102,35 @@ def master():
         vals = train_mpi.get_parameter(context)
 
         for i in xrange(1,size):
-            worker_vals = comm.recv(source=MPI.ANY_SOURCE, tag = MPI.ANY_TAG, status = status)
+            worker_vals,worker_tsw,worker_ttw = comm.recv(source=MPI.ANY_SOURCE, tag = MPI.ANY_TAG, status = status)
             tag = status.Get_tag()
             assert(tag == tags.DONE)
             assert(worker_vals != None)
+
+            round_source_words += worker_tsw
+            round_target_words += worker_ttw
+
             for name in worker_vals:
                 master_val = vals[name]
                 worker_val = worker_vals[name]
-                master_val += worker_val
-
-        print('All workers TRAIN_BATCHES done!')
+                master_val += worker_val        
 
         for name in vals:
             vals[name] /= size
         
         train_mpi.set_parameter(context,vals)
         
+        source_words += round_source_words
+        target_words += round_target_words
 
+        round_end_time = time.time()
+        round_time = round_end_time - round_start_time
+        till_now = round_end_time - start_time
+
+        logger.info('RoundSpeed {}/{}, AverageSpeed {}/{}, RoundTime {} sec'.format(round_source_words/round_time, round_target_words/round_time,source_words/till_now,target_words/till_now,round_time))
+        
+        if stop:
+            break
 
     #### Finish Training ####
     mainloop.after_train_master(train_context)
@@ -103,14 +139,16 @@ def master():
         comm.send(None, dest = i , tag = tags.EXIT)
         
     synchronize_tag(tags.EXIT)
-    print('All workers EXIT!')
 
-    print('Master EXIT!')
+    logger.info('All workers EXIT!')
+
+    logger.info('Master EXIT!')
     
 
 def worker():
-
-    print("I am a worker with rank %d on %s." % (rank, name))
+    name = MPI.Get_processor_name()
+    logging.basicConfig(level=logging.INFO,format="%(asctime)s: "+name+":"+str(rank)+" %(name)s: %(levelname)s: %(message)s")
+    logger.info("I am a worker with rank %d on %s." % (rank, name))
     comm.send(None, dest=0, tag=tags.READY)
     
     context = None
@@ -121,7 +159,7 @@ def worker():
         tag = status.Get_tag()
         
         if tag == tags.COMPILE:
-            context = train_mpi.compile()
+            context = train_mpi.compile(name+":"+str(rank))
             comm.send(None, dest=0, tag=tags.DONE)
             
         if tag == tags.BEFORE_TRAIN:
@@ -133,16 +171,18 @@ def worker():
             vals = data
             train_mpi.set_parameter(context,vals)
             mainloop = context['mainloop']
-            success = mainloop.train_batches_worker(train_context)
+            success,tsw,ttw = mainloop.train_batches_worker(train_context)
             vals = train_mpi.get_parameter(context)
             if not success:
                 vals = None
-            comm.send(vals, dest=0, tag=tags.DONE)
+            comm.send((vals,tsw,ttw), dest=0, tag=tags.DONE)
 
         elif tag == tags.EXIT:
             break
 
     comm.send(None, dest=0, tag=tags.EXIT)
+
+
 
 
 

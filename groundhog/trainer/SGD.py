@@ -12,6 +12,7 @@ __contact__ = "Razvan Pascanu <r.pascanu@gmail>"
 
 import numpy
 import time
+import logging
 
 import theano
 import theano.tensor as TT
@@ -20,6 +21,7 @@ from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
 from groundhog.utils import print_time, print_mem, const
 
+logger = logging.getLogger(__name__)
 
 class SGD(object):
     """
@@ -68,7 +70,7 @@ class SGD(object):
         ###################################
         # Step 1. Compile training function
         ###################################
-        print 'Constructing grad function'
+        logger.info('Constructing grad function')
         loc_data = self.gdata
         lr = TT.scalar('lr')
         self.prop_exprs = [x[1] for x in model.properties]
@@ -84,7 +86,7 @@ class SGD(object):
         rules = rval[nparams:nparams + nrules]
         outs = rval[nparams + nrules:]
 
-
+        
 
         norm_gs = sum(TT.sum(x**2)
             for x,p in zip(gs,
@@ -109,14 +111,14 @@ class SGD(object):
 
         store_gs = [(s,g) for s,g in zip(self.gs, gs)]
         updates = store_gs + [(s[0], r) for s,r in zip(model.updates, rules)]
-        print 'Compiling grad function'
+        logger.info('Compiling grad function')
         st = time.time()
         self.train_fn = theano.function(
             [], outs, name='train_function',
             updates = updates,
             givens = zip(model.inputs, loc_data),
             profile=self.state['profile'])
-        print 'took', time.time() - st
+        logger.info('took', time.time() - st)
 
 
         self.lr = numpy.float32(state['lr'])
@@ -173,7 +175,7 @@ class SGD(object):
             vals += [print_time(g_ed - g_st),
                      print_time(time.time() - self.step_timer),
                      float(self.lr)]
-            print msg % tuple(vals)
+            logger.info(msg % tuple(vals))
         self.step += 1
         ret = dict([('cost', float(cost)),
                        ('lr', float(self.lr)),
