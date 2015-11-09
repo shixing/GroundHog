@@ -1,12 +1,6 @@
 
 from mpi4py import MPI
 
-
-import logging
-import train_mpi
-import time
-
-
 def enum(*sequential, **named):
     """
     Handy way to fake an enumerated type in Python
@@ -23,12 +17,23 @@ comm = MPI.COMM_WORLD   # get MPI communicator object
 size = comm.size        # total number of processes
 rank = comm.rank        # rank of this process
 status = MPI.Status()   # get MPI status object
+name = MPI.Get_processor_name()
 
+# to use gpu
+import os
+flags = os.environ['THEANO_FLAGS']
+flags += ',device=gpu{}'.format(str(rank%2))
+flags += ',base_compiledir=/home/nlg-05/xingshi/.theano/{}/{}'.format(name,str(rank))
+#flags += ',base_compiledir=/tmp/.theano/{}'.format(str(rank))
+os.environ['THEANO_FLAGS'] = flags
 
+print flags
+
+import logging
+import time
+import train_mpi
 
 logger = logging.getLogger(__name__)
-
-
 
 
 def synchronize_tag(tag):
@@ -53,15 +58,14 @@ def master():
     logger.info("All workers are READY!")
     
     #### COMPILE ####
-
+    
     broadcast_tag(None,tags.COMPILE)
-
+    
     context = train_mpi.compile(name+":0",isMaster=True)
     mainloop = context['mainloop']
-
-    synchronize_tag(tags.DONE)
-    logger.info('All workers COMPILE done!')
     
+    synchronize_tag(tags.DONE)    
+    logger.info('All workers COMPILE done!')
 
     #### Train #####
 

@@ -171,12 +171,14 @@ class SGD(object):
         # Load the dataset into GPU
         # Note: not the most efficient approach in general, as it involves
         # each batch is copied individually on gpu
+        t_st = time.time()
         if isinstance(batch, dict):
             for gdata in self.gdata:
                 gdata.set_value(batch[gdata.name], borrow=True)
         else:
             for gdata, data in zip(self.gdata, batch):
                 gdata.set_value(data, borrow=True)
+        t_ed = time.time()
 
         total_source_words = numpy.sum(batch['x_mask'])
         total_target_words = numpy.sum(batch['y_mask'])
@@ -202,6 +204,9 @@ class SGD(object):
             vals += [print_time(g_ed - g_st),
                      print_time(time.time() - self.step_timer),
                      float(self.lr)]
+            msg += ' data transfer %s'
+            vals += [print_time(t_ed - t_st)]
+
             logger.info(msg % tuple(vals))
         self.step += 1
         ret = dict([('cost', float(cost)),

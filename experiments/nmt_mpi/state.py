@@ -4,7 +4,7 @@ def prototype_state():
     # Random seed
     state['seed'] = 1234
     # Logging level
-    state['level'] = 'INFO'
+    state['level'] = 'DEBUG'
 
     # ----- DATA -----
     # (all Nones in this section are placeholders for required values)
@@ -323,9 +323,13 @@ def prototype_en_zh():
     # you should have N workers which is prime to K
     # each worker should proceed M steps, where M = n * K. 
     state['sort_k_batches'] = 7
-    state['nWorkers'] = 8
-    state['nBatch_per_step'] = 7
+    state['nWorkers'] = 2
+    state['nBatch_per_step'] = 14
 
+    state['hookFreq'] = 100
+    # Validation frequency
+    state['validFreq'] = 500
+    state['loopIters'] = 20
 
 
 
