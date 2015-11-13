@@ -180,7 +180,8 @@ class LM_Model(Model):
 
         for vals in data_iterator:
             n_batches += 1
-
+            if n_batches % 10 == 0 :
+                logger.debug('Processed {} batches in validation'.format(n_batches))
             if isinstance(vals, dict):
                 val = vals.values()[0]
                 if val.ndim ==3:
@@ -203,7 +204,7 @@ class LM_Model(Model):
                         self.del_noise()
                 inps = list(vals)
                 _rvals = self.validate_step(*inps)
-                _cost += _rvals
+                cost += _rvals
 
         n_steps = numpy.log(2.)*n_steps
         cost = cost / n_steps

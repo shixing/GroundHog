@@ -1,0 +1,175 @@
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3018/4
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3018/5
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3006/0
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3006/1
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3011/2
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3011/3
+Validation computed every 500
+Validation computed every 500
+Validation computed every 500
+Validation computed every 500
+Validation computed every 500
+Validation computed every 500
+GPU status : Used 673.707 Mb Free 4125.855 Mb,total 4799.562 Mb [context start]
+Saving the model...
+Model saved, took 3.35844278336
+Input: compared to the sky @-@ high salaries of senior executives at state @-@ owned enterprises , the meager wages and pensions of ordinary state @-@ owned enterprise employees and retired workers are deeply disappointing ! <eol>
+Target: 国企 高 管 天 价 年薪 而 国企 普通 职工 和 退休 职工 可怜 的 那 点 工资 和 退休金 确实 叫 人心 寒 ! <eol>
+Input:   compared to the sky @-@ high salaries of senior executives at state @-@ owned enterprises , the meager wages and pensions of ordinary state @-@ owned enterprise employees and retired workers are deeply disappointing ! <eol> 
+Output:  饿死 指控 准备 自家 美国人 叙 粉 心知肚明 之类 眼下 已知 车子 有钱 洋奴哲学 妓女 听从 代表 作用 顺利 能 厚 一般 不知情 举 副 轻 第二 规定 错误 反抗 绝对 听从 良知 转移 相继 题目 不许 出钱 江湖 乞讨 一套 日 人民币 贪 示 表决 用 仰 底层 冻结 表示
+
+Input: using the function of " money " to stop the influence of " money " would be the most unwise method , or a no @-@ other @-@ way @-@ out method at most . <eol>
+Target: 用 " 钱 " 的 效用 去 制止 " 钱 " 的 作用 , 是 最 不明 智 的 办法 多 只能 是 没办法 的 办法 ! <eol>
+Input:   using the function of " money " to stop the influence of " money " would be the most unwise method , or a no @-@ other @-@ way @-@ out method at most . <eol> 
+Output:  假 束缚 会 唉 守法 暂且 监管 研究 朗 实行 自由 嚣张 流传 国家 歧视 ( 付 敏 具 上午 既然 出名 匪徒 否认 懂得 旨在 站 海军 纠葛 挣钱 思想家 进步 拖 决定 刁 货币 性 淹死 取得 导致 梦 转移 华北 石油 车 配 有能力 高效 十三 珠 奉行
+
+Input: but now , what if in the near future , the economy bursts with a " bang , " well ... i hope my sense is not that keen ! <eol>
+Target: 但是 现在 , 如果 真 的 经济 上 , 在 不久 的 将来 就 " 嘭 " 的 一 声 爆发出 来 的话 , 这 ... 希望 我的 感 观 不要 如此 的 敏锐 ! <eol>
+Input:   but now , what if in the near future , the economy bursts with a " bang , " well ... i hope my sense is not that keen ! <eol> 
+Output:  游行 以前 痰 小心 不通 能 耽误 原 傲慢 豁免 佣 公正 哀 国情 170 暴力行为 海军 平均工资 胆 居留 愚民 威胁 论 未来 寒 钱 唯心 局限于 阿扁 留学生 最好 受损 99 随 你 逼迫 灭 重建 腾飞 弱 推进 谴 友好 有 彻头彻尾 发 连 谩骂 家 楼上 极大
+
+Input: only by implementing in every sense of the term can the law be entrust with " life " . <eol>
+Target: 只有 不折不扣 地 实施 才能 赋予 法律 以 " 生命 " . <eol>
+Input:   only by implementing in every sense of the term can the law be entrust with " life " . <eol> 
+Output:  , , , , , 的 , , , , , , , , , , 的 , , , , , , , , , , , , , , , , , , , , , , , , , , , <eol>
+
+Input: the depression and worries brought on by receiving official delegations from mainland china have been all cleared away . <eol>
+Target: 对于 过去 接到 大陆 公务 团 带来 的 郁闷 和 烦恼 一 扫 而 光 . <eol>
+Input:   the depression and worries brought on by receiving official delegations from mainland china have been all cleared away . <eol> 
+Output:  , 的 , , , , , , , , , <eol>
+
+Input: the cost of the investigation of the july 23 high @-@ speed train accident still hasn't been publicized . <eol>
+Target: 7.23 动 车 事故 的 调查 , 价格 还 没有 公布 . <eol>
+Input:   the cost of the investigation of the july 23 high @-@ speed train accident still hasn't been publicized . <eol> 
+Output:  <eol>
+
+Input: because the environment of this country doesn't encourage people to excel . <eol>
+Target: 因为 这个 国家 的 土壤 就 不 允许 有人 优秀 . <eol>
+Input:   because the environment of this country doesn't encourage people to excel . <eol> 
+Output:  <eol>
+
+Input: if korea wants to go with others then let it be , <eol>
+Target: 朝鲜 想 跟 别人 就 跟 吧 , <eol>
+Input:   if korea wants to go with others then let it be , <eol> 
+Output:  <eol>
+
+Input: these ring leaders were precisely the sun that you referred to . <eol>
+Target: 这些 罪魁 者 正是 你 所 说 的 太阳 . <eol>
+Input:   these ring leaders were precisely the sun that you referred to . <eol> 
+Output:  <eol>
+
+Input: nonsense <eol>
+Target: 胡言乱语 <eol>
+Input:   nonsense <eol> 
+Output:  的 , <eol>
+
+Input: no ! <eol>
+Target: 不 ! <eol>
+Input:   no ! <eol> 
+Output:  的 ? <eol>
+
+Input: alas ... <eol>
+Target: 唉 ... <eol>
+Input:   alas ... <eol> 
+Output:  的 的 . <eol>
+
+Saving the model...
+Model saved, took 3.22314190865
+Input: to make clear that weibo services are responsible for verifying customer information , and fulfill the obligations they have in keeping user information confidential ; <eol>
+Target: 明确 微 博 服务 负 有 对 客户 信息 进行 审核 的 职责 , 并 履行 对 用户 信息 予以 保密 的 义务 ; <eol>
+Input:   to make clear that weibo services are responsible for verifying customer information , and fulfill the obligations they have in keeping user information confidential ; <eol> 
+Output:  , <eol>
+
+Input: north korea is the portal of beijing , it should not be occupied by the yankees , still it is of certain strategic significance ! <eol>
+Target: 朝鲜 是 北京 的 门户 , 不能 给 美国 佬 占 了 , 它 还是 有 一定 战略 意义 的 ! <eol>
+Input:   north korea is the portal of beijing , it should not be occupied by the yankees , still it is of certain strategic significance ! <eol> 
+Output:  , <eol>
+
+Input: unusual signs appeared informer wu qiangmin 's home for the last two days , the informer also saw some unusual signs whilst out walking , <eol>
+Target: 近 两天 举报 人 吴 强 敏 家 周围 出现 一些 不正 常 迹象 , 举报 人 走路 也 遇到 一些 不正 常 迹象 , <eol>
+Input:   unusual signs appeared informer wu qiangmin 's home for the last two days , the informer also saw some unusual signs whilst out walking , <eol> 
+Output:  , <eol>
+
+Input: then it will be fine so long as the state machinery prints money everyday . <eol>
+Target: 那样 , 只要 国家机器 , 天天 印刷 人民币 就 可以 . <eol>
+Input:   then it will be fine so long as the state machinery prints money everyday . <eol> 
+Output:  <eol>
+
+Input: the tragedy of the philippines ' development is a lesson we should draw from . <eol>
+Target: 菲律宾 的 发展 悲剧 就是 前车 之 鉴 . <eol>
+Input:   the tragedy of the philippines ' development is a lesson we should draw from . <eol> 
+Output:  <eol>
+
+Input: as a matter of fact , many others were also scared , hee hee ... <eol>
+Target: 其实 , 一起 恐惧 的 还有 大 幼 幼 , 嘿嘿 ... <eol>
+Input:   as a matter of fact , many others were also scared , hee hee ... <eol> 
+Output:  <eol>
+
+Input: the question is how to resolve the issues ; <eol>
+Target: 问题 是 用 何 种 方式 来 解决 ; <eol>
+Input:   the question is how to resolve the issues ; <eol> 
+Output:  <eol>
+
+Input: support the good suggestion from the post starter . <eol>
+Target: 支持 楼 主 的 好 建议 . <eol>
+Input:   support the good suggestion from the post starter . <eol> 
+Output:  <eol>
+
+Input: neither do they have complaints against the government . <eol>
+Target: 更 不是 对 政府 有意 见 . <eol>
+Input:   neither do they have complaints against the government . <eol> 
+Output:  <eol>
+
+Input: through the sacrifice of these 40 citizens , china 's strategy ought to be to research how to increase the standards of chinese management and the quality of employees themselves . <eol>
+Target: 通过 这次 牺牲 40 名 国人 , 中国 的 战略 , 应该 研究 如何 提高 中国人 的 管理 水平 与 人员 自身 的 素质 . <eol>
+Input:   through the sacrifice of these 40 citizens , china 's strategy ought to be to research how to increase the standards of chinese management and the quality of employees themselves . <eol> 
+Output:  你 ? <eol>
+
+Input: being able to resolve all the baffling mysteries known now by the people , and to complete the upgrade of the civilization of society , are the needs of social progress . <eol>
+Target: 能够 解除 现在 大家 公认 的 一切 难 解 之 迷 , 完成 社会 文明 的 升级 , 这 也是 社会 进步 的 需要 . <eol>
+Input:   being able to resolve all the baffling mysteries known now by the people , and to complete the upgrade of the civilization of society , are the needs of social progress . <eol> 
+Output:  <eol>
+
+Input: in my opinion , if " judicial independence " can build up the trampling on the majority of public opinion , what significance does such " judicial independence " still have ? <eol>
+Target: 本人 认为 , 如果 " 司法独立 " 是 可以 为 践踏 大多数 民意 张目 的 , 那样 的 " 司法独立 " 还有 何 意义 ? <eol>
+Input:   in my opinion , if " judicial independence " can build up the trampling on the majority of public opinion , what significance does such " judicial independence " still have ? <eol> 
+Output:  你 <eol>
+
+Input: that 's not a tide of democracy ! that 's the arrogant bullying of the 1 % rich and powerful imperial politicians ! <eol>
+Target: 那不 是 民主 大潮 , 那是 1 % 的 帝国 富豪 政客 的 嚣张 跋 扈 ! <eol>
+Input:   that 's not a tide of democracy ! that 's the arrogant bullying of the 1 % rich and powerful imperial politicians ! <eol> 
+Output:  我 我 用 是 , 是 就 , 不 国家 , <eol>
+
+Input: all along i 'm not afraid to assess the chinese in the worst light . but some chinese are indeed horrid . <eol>
+Target: 我 向来 不 惮 以 最 坏 的 恶意 来 估计 中国人 . 可 眼下 有些 中国人 的确 又 是 那么 可恶 . <eol>
+Input:   all along i 'm not afraid to assess the chinese in the worst light . but some chinese are indeed horrid . <eol> 
+Output:  我 想 , 你 的 人 , <eol>
+
+Input: now you can't hear any teachers say to students , you should study hard , to be a scientist in the future ! <eol>
+Target: 现在 , 你 还 能 听到 哪个 老师 对 学生 讲 , 你们 要好 好学 习 , 将来 做 一个 科学家 ! <eol>
+Input:   now you can't hear any teachers say to students , you should study hard , to be a scientist in the future ! <eol> 
+Output:  你 利比亚 , 在 利比亚 的 社会 , <eol>
+
+Saving the model...
+Model saved, took 3.19726014137
+Input: china is under the government , the government is under the party . <eol>
+Target: 中国 是政 府 的 天下 , 政府 是 党 的 天下 . <eol>
+Input:   china is under the government , the government is under the party . <eol> 
+Output:  利比亚 的 人 是 : <eol>
+
+Input: lets learn again from chairman mao to fight a people 's war . <eol>
+Target: 还是 学习 毛主席 打 一场 人民战争 . <eol>
+Input:   lets learn again from chairman mao to fight a people 's war . <eol> 
+Output:  没有 是 想 的 人 <eol>
+
+Input: 170 billion , it 's the blood and sweat of the people . <eol>
+Target: 1700 亿元 , 是 民众 地 血汗 . <eol>
+Input:   170 billion , it 's the blood and sweat of the people . <eol> 
+Output:  这 是 利比亚 , 我 少 的 , <eol>
+
+Saving the model...
+Model saved, took 3.28338909149
+Took 24.8340198159 min
+Average step took 1.10033845901
+That amounts to 3926064.71637 sentences in a day
+Average log2 per example is 156.358322144

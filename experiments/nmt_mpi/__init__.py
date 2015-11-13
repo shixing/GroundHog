@@ -8,4 +8,7 @@ from state import\
     prototype_phrase_state,\
     prototype_encdec_state,\
     prototype_search_state,\
-    prototype_en_zh
+    prototype_en_zh,\
+    prototype_en_fr,\
+    prototype_en_fr_1
+

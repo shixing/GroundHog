@@ -90,13 +90,21 @@ def compile(ip,isMaster=False):
     enc_dec = RNNEncoderDecoder(state, rng, skip_init)
     enc_dec.build()
     lm_model = enc_dec.create_lm_model()
-    
+
+    validate_data = None
+    if isMaster:
+        logger.debug("Load validate data")
+        validate_data = get_batch_iterator(state,validation=True)
+        logger.debug("build valid fn")
+        valid_fn = enc_dec.create_validate_fn(lm_model)
+        lm_model.validate_step = valid_fn
+        
     logger.debug("Load data")
     train_data = get_batch_iterator(state)
     logger.debug("Compile trainer")
     algo = eval(state['algo'])(lm_model, state, train_data)
 
-    main = MainLoop_mpi(train_data, None, None, lm_model, algo, state, None,
+    main = MainLoop_mpi(train_data, validate_data, None, lm_model, algo, state, None,
             reset=state['reset'],
             hooks=[RandomSamplePrinter(state, lm_model, train_data)]
                 if state['hookFreq'] >= 0 and isMaster

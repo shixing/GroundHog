@@ -159,7 +159,7 @@ def prototype_state():
     state['patience'] = 1
     state['lr'] = 1.
     state['minlr'] = 0
-
+    state['divide_lr'] = False
     # Batch size
     state['bs']  = 50
     # We take this many minibatches, merge them,
@@ -207,6 +207,8 @@ def prototype_state():
     state['validFreq'] = 500
     # Model saving frequency (in minutes)
     state['saveFreq'] = 10
+
+
 
     # Sampling hook settings
     state['n_samples'] = 3
@@ -301,12 +303,15 @@ def prototype_phrase_lstm_state():
 def prototype_en_zh():
     state = prototype_search_state()
 
-    dir_path = "/home/nlg-05/xingshi/workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
+    #dir_path = "/home/nlg-05/xingshi/workspace/misc/lstm/ghdata/Eng_Chr/1k/"
 
-    #dir_path = "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
+    dir_path = "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
 
     state['target'] = [dir_path+"btext.zh.shuf.h5"]
     state['source'] = [dir_path+"btext.en.shuf.h5"]
+    state['target_valid'] = [dir_path+"btext.zh.shuf.h5"]
+    state['source_valid'] = [dir_path+"btext.en.shuf.h5"]
+
     state['indx_word'] = dir_path+"ivocab.en.pkl"
     state['indx_word_target'] = dir_path+"ivocab.zh.pkl"
     state['word_indx'] = dir_path+"vocab.en.pkl"
@@ -318,19 +323,65 @@ def prototype_en_zh():
     state['n_sym_target'] = state['null_sym_target'] + 1
 
     state['prefix'] = 'search_zh_'
+    state['cost_threshold'] = 1.5
+    # to keep balance, this number K should be a prime. 
+    # you should have N workers which is prime to K
+    # each worker should proceed M steps, where M = n * K. 
+    state['sort_k_batches'] = 7
+    state['nWorkers'] = 1
+    state['nBatch_per_step'] = 7
+
+    state['hookFreq'] = 100
+    # Validation frequency
+    state['validFreq'] = 1
+    state['loopIters'] = 1000
+
+    return state
+
+def prototype_en_fr():
+    state = prototype_search_state()
+
+    dir_path = "/home/nlg-05/xingshi/workspace/misc/lstm/ghdata/Eng_Fre/"
+
+    #dir_path = "/Users/xingshi/Workspace/misc/lstm/GroundHog/experiments/nmt_mpi/preprocess/"
+
+    state['target'] = [dir_path+"train.fr.shuf.h5"]
+    state['source'] = [dir_path+"train.en.shuf.h5"]
+    state['target_valid'] = [dir_path+"validation.fr.h5"]
+    state['source_valid'] = [dir_path+"validation.en.h5"]
+
+    state['indx_word'] = dir_path+"ivocab.en.pkl"
+    state['indx_word_target'] = dir_path+"ivocab.fr.pkl"
+    state['word_indx'] = dir_path+"vocab.en.pkl"
+    state['word_indx_trgt'] = dir_path+"vocab.fr.pkl"
+    
+    state['null_sym_source'] = 30000
+    state['null_sym_target'] = 30000
+    state['n_sym_source'] = state['null_sym_source'] + 1
+    state['n_sym_target'] = state['null_sym_target'] + 1
+
+    state['prefix'] = 'search_en_fr_'
 
     # to keep balance, this number K should be a prime. 
     # you should have N workers which is prime to K
     # each worker should proceed M steps, where M = n * K. 
     state['sort_k_batches'] = 7
-    state['nWorkers'] = 2
-    state['nBatch_per_step'] = 14
-
-    state['hookFreq'] = 100
+    state['nWorkers'] = 6
+    state['nBatch_per_step'] = 7
+    state['cost_threshold'] = 2
+    
+    state['hookFreq'] = 500
     # Validation frequency
-    state['validFreq'] = 500
-    state['loopIters'] = 20
+    state['validFreq'] = 600 / state['nWorkers']
+    state['loopIters'] = 12000 / state['nWorkers']
+    state['bs']  = 80
 
+    return state
 
-
+def prototype_en_fr_1():
+    state = prototype_en_fr()
+    state['nWorkers'] = 1
+    state['validFreq'] = 600 / state['nWorkers']
+    state['loopIters'] = 12000 / state['nWorkers']
+    
     return state

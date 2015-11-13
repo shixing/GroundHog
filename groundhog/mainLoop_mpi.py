@@ -342,9 +342,11 @@ class MainLoop_mpi(object):
                         self.channel.save()
                     print 'Got NaN while training'
                     last_cost = 0
+
                 if self.valid_data is not None and\
                    self.step % self.state['validFreq'] == 0 and\
                    self.step > 1:
+                    self.valid_data.reset(-1)
                     valcost = self.validate()
                     if valcost > self.old_cost * self.state['cost_threshold']:
                         self.patience -= 1

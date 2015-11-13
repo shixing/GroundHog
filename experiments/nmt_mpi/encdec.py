@@ -3,6 +3,7 @@ import logging
 import pprint
 import operator
 import itertools
+import time
 
 import theano
 import theano.tensor as TT
@@ -129,7 +130,7 @@ def create_padded_batch(state, x, y, return_dict=False):
     else:
         return X, Xmask, Y, Ymask
 
-def get_batch_iterator(state):
+def get_batch_iterator(state,validation=False):
 
     class Iterator(PytablesBitextIterator):
 
@@ -143,24 +144,36 @@ def get_batch_iterator(state):
                 self.nWorkers = 1
             self.batch_index = -1
             self.init_move = False
+            self.isValidation = validation
 
         def get_homogenous_batch_iter(self):
             while True:
                 k_batches = state['sort_k_batches']
                 batch_size = state['bs']
-                data = [PytablesBitextIterator.next(self) for k in range(k_batches)]
+                data = []
+                last_batch = False
+                for i in xrange(k_batches):
+                    idata = PytablesBitextIterator.next(self)
+                    if idata:
+                        data.append(idata)
+                    else:
+                        last_batch = True
+                        break
+                        
                 x = numpy.asarray(list(itertools.chain(*map(operator.itemgetter(0), data))))
                 y = numpy.asarray(list(itertools.chain(*map(operator.itemgetter(1), data))))
                 lens = numpy.asarray([map(len, x), map(len, y)])
                 order = numpy.argsort(lens.max(axis=0)) if state['sort_k_batches'] > 1 \
                         else numpy.arange(len(x))
-                for k in range(k_batches):
+                for k in range(len(data)):
                     indices = order[k * batch_size:(k + 1) * batch_size]
                     batch = create_padded_batch(state, [x[indices]], [y[indices]],
                             return_dict=True)
                     if batch:
                         self.batch_index += 1
                         yield batch
+                if last_batch:
+                    break
 
         def next(self,peek=False):
             batch = None
@@ -169,10 +182,18 @@ def get_batch_iterator(state):
                 batch =  self.next_step(1,peek=peek)
             else:
                 batch = self.next_step(self.nWorkers,peek=peek) 
-
-            shape = batch['x'].shape
-            logger.debug('Provide batch {} shape {}'.format(self.batch_index,shape))
+            
+            if batch and not self.isValidation:
+                shape = batch['x'].shape
+                logger.debug('Provide batch {} shape {}'.format(self.batch_index,shape))
             return batch
+
+        def reset(self,offset = -1):
+            self.batch_iter = None
+            self.peeked_batch = None
+            self.batch_index = -1
+            self.init_move = False
+            self.start(offset)
 
         def next_step(self, step, peek=False):
             if not self.batch_iter:
@@ -197,16 +218,30 @@ def get_batch_iterator(state):
 
             return batch
 
-    train_data = Iterator(
-        batch_size=int(state['bs']),
-        target_file=state['target'][0],
-        source_file=state['source'][0],
-        can_fit=False,
-        queue_size=1000,
-        shuffle=state['shuffle'],
-        use_infinite_loop=state['use_infinite_loop'],
-        max_len=state['seqlen'])
-    return train_data
+    if validation:
+        validation_data = Iterator(
+            batch_size=int(state['bs']),
+            target_file=state['target_valid'][0],
+            source_file=state['source_valid'][0],
+            can_fit=False,
+            queue_size=1000,
+            shuffle=state['shuffle'],
+            use_infinite_loop=False,
+            max_len=state['seqlen'])
+        validation_data.nWorkers = 1
+        return validation_data
+
+    else:
+        train_data = Iterator(
+            batch_size=int(state['bs']),
+            target_file=state['target'][0],
+            source_file=state['source'][0],
+            can_fit=False,
+            queue_size=1000,
+            shuffle=state['shuffle'],
+            use_infinite_loop=state['use_infinite_loop'],
+            max_len=state['seqlen'])
+        return train_data
 
 class RecurrentLayerWithSearch(Layer):
     """A copy of RecurrentLayer from groundhog"""
@@ -1417,6 +1452,7 @@ class RNNEncoderDecoder(object):
     def create_lm_model(self):
         if hasattr(self, 'lm_model'):
             return self.lm_model
+        
         self.lm_model = LM_Model(
             cost_layer=self.predictions,
             sample_fn=self.create_sampler(),
@@ -1427,7 +1463,37 @@ class RNNEncoderDecoder(object):
         self.lm_model.load_dict(self.state)
         logger.debug("Model params:\n{}".format(
             pprint.pformat(sorted([p.name for p in self.lm_model.params]))))
+
         return self.lm_model
+
+    def create_validate_fn(self,model):
+        loc_data = [theano.shared(numpy.zeros( (2,)*x.ndim,
+                                               dtype=x.dtype),
+                                  name=x.name) for x in model.inputs]
+        outs = [model.train_cost]
+        logger.debug('Compile valid_fn')
+        st = time.time()
+        theano_valid_fn = theano.function(
+            [],outs,name='valid_fn',
+            updates = None,
+            givens = zip(model.inputs,loc_data))
+        logger.debug('took {}'.format(time.time() - st))
+        
+        def valid_fn(**batch):
+            if isinstance(batch, dict):
+                for gdata in loc_data:
+                    gdata.set_value(batch[gdata.name], borrow=True)
+            else:
+                for gdata, data in zip(loc_data, batch):
+                    gdata.set_value(data, borrow=True)
+            rvals = theano_valid_fn()
+            #print 'cost:',rvals[0]
+            #param = model.params[3]
+            #print param.name
+            #print param.get_value()
+            return rvals[0]
+        
+        return valid_fn
 
     def create_representation_computer(self):
         if not hasattr(self, "repr_fn"):
