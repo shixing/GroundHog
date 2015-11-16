@@ -323,17 +323,17 @@ def prototype_en_zh():
     state['n_sym_target'] = state['null_sym_target'] + 1
 
     state['prefix'] = 'search_zh_'
-    state['cost_threshold'] = 1.5
+    state['cost_threshold'] = 2
     # to keep balance, this number K should be a prime. 
     # you should have N workers which is prime to K
     # each worker should proceed M steps, where M = n * K. 
     state['sort_k_batches'] = 7
-    state['nWorkers'] = 1
+    state['nWorkers'] = 2
     state['nBatch_per_step'] = 7
 
     state['hookFreq'] = 100
     # Validation frequency
-    state['validFreq'] = 1
+    state['validFreq'] = 10
     state['loopIters'] = 1000
 
     return state
@@ -360,28 +360,40 @@ def prototype_en_fr():
     state['n_sym_source'] = state['null_sym_source'] + 1
     state['n_sym_target'] = state['null_sym_target'] + 1
 
-    state['prefix'] = 'search_en_fr_'
+    # load-syn-average : lsa
+
+    state['prefix'] = 'search_en_fr_lsa' 
 
     # to keep balance, this number K should be a prime. 
     # you should have N workers which is prime to K
     # each worker should proceed M steps, where M = n * K. 
-    state['sort_k_batches'] = 7
+    state['sort_k_batches'] = 11
     state['nWorkers'] = 6
-    state['nBatch_per_step'] = 7
+    state['nBatch_per_step'] = 11
     state['cost_threshold'] = 2
-    
-    state['hookFreq'] = 500
+
     # Validation frequency
     state['validFreq'] = 600 / state['nWorkers']
-    state['loopIters'] = 12000 / state['nWorkers']
+    state['loopIters'] = 10000
+    state['hookFreq'] = state['validFreq']
     state['bs']  = 80
+
+    state['master_model_path'] = "/home/nlg-05/xingshi/nmt_mpi/"+"search_en_fr_1model.npz"
 
     return state
 
 def prototype_en_fr_1():
     state = prototype_en_fr()
+
     state['nWorkers'] = 1
     state['validFreq'] = 600 / state['nWorkers']
+    state['hookFreq'] = state['validFreq']
     state['loopIters'] = 12000 / state['nWorkers']
+
+    state['sort_k_batches'] = 20
+    state['nBatch_per_step'] = state['loopIters'] / 5
+    state['cost_threshold'] = 2
     
+    state['prefix'] = 'search_en_fr_1'
+
     return state

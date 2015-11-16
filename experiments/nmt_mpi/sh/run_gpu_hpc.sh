@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -l nodes=3:gpus=2
-#PBS -l walltime=4:00:00
+#PBS -l walltime=12:00:00
 #PBS -q isi
 
 source $NLGHOME/sh/cuda_source.sh

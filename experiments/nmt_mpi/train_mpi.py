@@ -90,6 +90,11 @@ def compile(ip,isMaster=False):
     enc_dec = RNNEncoderDecoder(state, rng, skip_init)
     enc_dec.build()
     lm_model = enc_dec.create_lm_model()
+    if isMaster:
+        if 'master_model_path' in state:
+            model_path = state['master_model_path']
+            lm_model.load(model_path)
+            
 
     validate_data = None
     if isMaster:
@@ -141,4 +146,17 @@ def get_parameter(context):
     vals = dict([(x.name, x.get_value()) for x in model.params])
     return vals
 
+def get_delta(new_vals,old_vals):
+    deltas = {}
+    for name in new_vals:
+        new_val = new_vals[name]
+        old_val = old_vals[name]
+        delta = new_val - old_val
+        deltas[name] = delta
+        
+    return deltas
 
+def add_delta(vals,deltas):
+    for name in vals:
+        vals[name] += deltas[name]
+    return vals
