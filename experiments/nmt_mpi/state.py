@@ -368,15 +368,17 @@ def prototype_en_fr():
     # you should have N workers which is prime to K
     # each worker should proceed M steps, where M = n * K. 
     state['sort_k_batches'] = 11
-    state['nWorkers'] = 6
+    state['nWorkers'] = 5
     state['nBatch_per_step'] = 11
     state['cost_threshold'] = 2
 
     # Validation frequency
-    state['validFreq'] = 600 / state['nWorkers']
+    state['validFreq'] = 1000
     state['loopIters'] = 10000
     state['hookFreq'] = state['validFreq']
     state['bs']  = 80
+    state['start_batch'] = 0
+
 
     state['master_model_path'] = "/home/nlg-05/xingshi/nmt_mpi/"+"search_en_fr_1model.npz"
 

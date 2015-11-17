@@ -283,6 +283,12 @@ class MainLoop_mpi(object):
                 if 'next_offset' in self.timings
                 else -1)
         
+        start_batch = 0
+        if 'start_batch' in state:
+            start_batch = state['start_batch']
+        if start_batch > 0:
+            self.train_data.next_step(start_batch)
+
         train_context['last_cost'] = last_cost
 
         return train_context
@@ -420,7 +426,13 @@ class MainLoop_mpi(object):
         self.train_data.start(self.timings['next_offset']
                 if 'next_offset' in self.timings
                 else -1)
-        self.train_data.next_step(workerID)
+
+        start_batch = 0
+        if 'start_batch' in state:
+            start_batch = state['start_batch']
+
+        self.train_data.next_step(workerID + start_batch)
+        
 
         train_context['last_cost'] = last_cost
 
