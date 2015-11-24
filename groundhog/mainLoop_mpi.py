@@ -279,16 +279,14 @@ class MainLoop_mpi(object):
         # TODO to change it. 
         last_cost = 1.
         self.state['clr'] = self.state['lr']
-        self.train_data.start(self.timings['next_offset']
-                if 'next_offset' in self.timings
-                else -1)
-        
-        start_batch = 0
-        if 'start_batch' in state:
-            start_batch = state['start_batch']
-        if start_batch > 0:
-            self.train_data.next_step(start_batch)
 
+        start_point = 0
+        start_batch = 0
+        if 'start_batch' in self.state:
+            start_batch = self.state['start_batch']
+        start_point = start_batch * self.state['bs']
+        self.train_data.start(start_point)
+        
         train_context['last_cost'] = last_cost
 
         return train_context
@@ -307,19 +305,21 @@ class MainLoop_mpi(object):
         total_target_words = 0
 
         for ibatch in xrange(n_batches):
-            if not (self.step < self.state['loopIters'] and
-                    last_cost > .1*self.state['minerr'] and
-                    (time.time() - start_time)/60. < self.state['timeStop'] and
-                    self.state['lr'] > self.state['minlr']):
+            #if not (self.step < self.state['loopIters'] and
+            #        last_cost > .1*self.state['minerr'] and
+            #        (time.time() - start_time)/60. < self.state['timeStop'] and
+            #self.state['lr'] > self.state['minlr']):
+            #    stop = True
+            #    break
+            if not self.step < self.state['loopIters']:
                 stop = True
                 break
-                
+ 
             if self.step > 0 and (time.time() - self.save_time)/60. >= self.state['saveFreq']:
                 self.save()
                 if self.channel is not None:
                     self.channel.save()
                 self.save_time = time.time()
-            st = time.time()
 
             try:
                 rvals = self.algo()
@@ -330,14 +330,14 @@ class MainLoop_mpi(object):
                 total_source_words += rvals['total_source_words']
                 total_target_words += rvals['total_target_words']
 
-                for name in rvals.keys():
-                    if name == 'total_source_words' or name == 'total_target_words':
-                        continue
-                    self.timings[name][self.step] = float(numpy.array(rvals[name]))
-                if self.l2_params:
-                    for param in self.model.params:
-                        self.timings["l2_" + param.name][self.step] =\
-                            numpy.mean(param.get_value() ** 2) ** 0.5
+                #for name in rvals.keys():
+                #    if name == 'total_source_words' or name == 'total_target_words':
+     #                   continue
+      #              self.timings[name][self.step] = float(numpy.array(rvals[name]))
+       #         if self.l2_params:
+        #            for param in self.model.params:
+         #               self.timings["l2_" + param.name][self.step] =\
+          #                  numpy.mean(param.get_value() ** 2) ** 0.5
 
                 if (numpy.isinf(rvals['cost']) or
                    numpy.isnan(rvals['cost'])) and\
@@ -383,8 +383,8 @@ class MainLoop_mpi(object):
 
                 ibatch += 1
                 self.step += 1
-                self.timings['step'] = self.step
-                self.timings['next_offset'] = self.train_data.next_offset
+                #self.timings['step'] = self.step
+                #self.timings['next_offset'] = self.train_data.next_offset
             except KeyboardInterrupt:
                 interrupt = True
                 break
@@ -423,17 +423,17 @@ class MainLoop_mpi(object):
         # TODO to change it. 
         last_cost = 1.
         self.state['clr'] = self.state['lr']
-        self.train_data.start(self.timings['next_offset']
-                if 'next_offset' in self.timings
-                else -1)
 
+        start_point = 0
         start_batch = 0
-        if 'start_batch' in state:
-            start_batch = state['start_batch']
+        if 'start_batch' in self.state:
+            start_batch = self.state['start_batch']
+        start_point = start_batch * self.state['bs']
 
-        self.train_data.next_step(workerID + start_batch)
+        self.train_data.start(start_point)
+
+        self.train_data.next_step(workerID)
         
-
         train_context['last_cost'] = last_cost
 
         return train_context

@@ -1,0 +1,276 @@
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3013/5
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3013/4
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3002/1
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3012/2
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3012/3
+floatX=float32,nvcc.fastmath=True,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3002/0
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+GPU status : Used 1477.379 Mb Free 3322.184 Mb,total 4799.562 Mb [context start]
+Saving the model...
+Model saved, took 6.93862295151
+Input: Other elements of the description may include the duration , the direction and the frequency of the motion . <eol>
+Target: Parfois aussi la description doit comporter d&apos; autres éléments tels que la durée , la direction et la fréquence du mouvement . <eol>
+Input:   Other elements of the description may include the duration , the direction and the frequency of the motion . <eol> 
+Output:  Les questions doivent être UNK , les mots et les avantages de la part et les exigences de la situation . <eol>
+
+Input: Jim UNK , Minister for Economic Development , Minister for Industry and Regional Development and Associate Minister of Health of New Zealand <eol>
+Target: Jim UNK , Minister for Economic Development , Minister for Industry and Regional Development and UNK Minister of Health ( Nouvelle-Zélande ) <eol>
+Input:   Jim UNK , Minister for Economic Development , Minister for Industry and Regional Development and Associate Minister of Health of New Zealand <eol> 
+Output:  UNK UNK , Bureau de la République démocratique de la République de Russie , UNK et UNK <eol>
+
+Input: The Secretary-General also stated that the achievement of this objective might include streamlining programme production and scaling down tape programme distribution . <eol>
+Target: Il s&apos; agirait notamment de rationaliser la production des programmes et de réduire les émissions en différé . <eol>
+Input:   The Secretary-General also stated that the achievement of this objective might include streamlining programme production and scaling down tape programme distribution . <eol> 
+Output:  Le Comité a aussi également de la Commission de la Loi sur le nombre de soins de santé , les personnes handicapées et les femmes sont UNK . <eol>
+
+Saving the model...
+Model saved, took 6.82569694519
+Saving the model...
+Model saved, took 7.15881586075
+Saving the model...
+Model saved, took 7.18402981758
+**  0     validation: cost:534.868538  ppl:102677098511016810890601538340721691295246909911078624150227005473585041134000043720199967811142056107089059667206440614822531280326285641990400631507645651484672.000000 whole time 36.104 min patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Tunisia <eol>
+Target: Tunisie <eol>
+Input:   Tunisia <eol> 
+Output:  où <eol>
+
+Input: UNK <eol>
+Target: UNK <eol>
+Input:   UNK <eol> 
+Output:  UNK <eol>
+
+Input: Opportunities <eol>
+Target: UNK <eol>
+Input:   Opportunities <eol> 
+Output:  Produits <eol>
+
+Saving the model...
+Model saved, took 6.96756887436
+Saving the model...
+Model saved, took 7.19918704033
+Saving the model...
+Model saved, took 7.03856897354
+Saving the model...
+Model saved, took 6.79953503609
+**  1     validation: cost:499.943388  ppl:3147428134345665744809953944950149760519714584803159906689502103075985835621137289208147229198336541360554595462433075027589750853940107416807193706496.000000 whole time  1.200 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Counsel for the Commission has referred me to two decisions of UNK in similar , but not comparable cases . <eol>
+Target: L&apos; avocat de la Commission a signalé à mon attention deux décisions qu&apos; ont rendues des UNK dans des circonstances semblables mais non comparables . <eol>
+Input:   Counsel for the Commission has referred me to two decisions of UNK in similar , but not comparable cases . <eol> 
+Output:  La Commission a fait qu&apos; une décision d&apos; une décision de l&apos; UE , a besoin d&apos; une UNK . <eol>
+
+Input: When he came to , he found himself in a UNK of water on the floor of the main hall of the police station . <eol>
+Target: Quand il UNK conscience , il se trouvait sur le sol du hall principal du poste de police dans une UNK d&apos; eau . <eol>
+Input:   When he came to , he found himself in a UNK of water on the floor of the main hall of the police station . <eol> 
+Output:  Lorsque les déclarations de l&apos; UNK , les études de l&apos; UNK sont disponibles pour la UNK . <eol>
+
+Input: The UNK of the Two Holy UNK , King Abdullah Bin UNK will address the Summit at its inaugural session . <eol>
+Target: Le UNK des deux UNK UNK , le Roi Abdallah Ben UNK , prononcera un discours au cours de la cérémonie inaugurale du sommet . <eol>
+Input:   The UNK of the Two Holy UNK , King Abdullah Bin UNK will address the Summit at its inaugural session . <eol> 
+Output:  La UNK , qui UNK des demandes de l&apos; UNK , a demandé à l&apos; issue de la Commission . <eol>
+
+Saving the model...
+Model saved, took 7.07806706429
+Saving the model...
+Model saved, took 6.89074110985
+Saving the model...
+Model saved, took 7.05934882164
+**  2     validation: cost:470.072808  ppl:3206382411399145300605605142121789833842179707639287928954073036964927359520079150415986680420797508560138814411803438311497602176923287420928.000000 whole time  1.796 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: ( c ) UNK UNK . <eol>
+Target: c ) un débitmètre à UNK . <eol>
+Input:   ( c ) UNK UNK . <eol> 
+Output:  c ) La UNK UNK UNK UNK UNK . <eol>
+
+Input: 1.0 GENERAL , UNK AND LEGAL UNK <eol>
+Target: 1.0 Structures générales , socioéconomiques et juridiques <eol>
+Input:   1.0 GENERAL , UNK AND LEGAL UNK <eol> 
+Output:  UNK UNK , UNK ET UNK <eol>
+
+Input: It is a seriously counterproductive result . <eol>
+Target: C&apos; est un résultat gravement UNK . <eol>
+Input:   It is a seriously counterproductive result . <eol> 
+Output:  Il n&apos; y a pas une importance de l&apos; ordre du jour . <eol>
+
+Saving the model...
+Model saved, took 6.96089601517
+Saving the model...
+Model saved, took 7.00387620926
+Saving the model...
+Model saved, took 6.94681286812
+Saving the model...
+Model saved, took 6.86439108849
+**  3     validation: cost:427.804855  ppl:605471393958694611514770155855011664296406429595298754589628255419130788176950692884599340995517158981099217525724394098513674240.000000 whole time  2.393 h   patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: UNK of UNK &quot; languages &quot; and sign systems are in use in Canada . <eol>
+Target: Des douzaines de &quot; langues &quot; manuelles ‑ UNK et de systèmes de signes sont en usage au Canada , en particulier dans les écoles pour les Sourds . <eol>
+Input:   UNK of UNK &quot; languages &quot; and sign systems are in use in Canada . <eol> 
+Output:  Les UNK du &quot; UNK &quot; et de la consommation sont en train de réduire la production . <eol>
+
+Input: The objective of the program was to advocate the Canadian position related to the UNK to 25 international participants representing 14 countries that are party to the UNK . <eol>
+Target: Le programme avait pour objectif de défendre la position canadienne relative au Protocole sur la biosécurité auprès de 25 participants internationaux représentant 14 pays signataires dudit Protocole . <eol>
+Input:   The objective of the program was to advocate the Canadian position related to the UNK to 25 international participants representing 14 countries that are party to the UNK . <eol> 
+Output:  La participation de l&apos; étude a été décidé de mettre fin de la nouvelle génération de développement du monde entier , le 30 mars 2003 , les deux pays qui ont fait la première fois la UNK . <eol>
+
+Input: But as the Commission considers these UNK to be fundamentally safe , there are no reasons to deprive consumers and the food industry of their use . <eol>
+Target: Mais comme la Commission considère ces UNK comme fondamentalement sûrs , il n&apos; y a aucune raison de priver les consommateurs et l&apos; industrie alimentaire de leur utilisation . <eol>
+Input:   But as the Commission considers these UNK to be fundamentally safe , there are no reasons to deprive consumers and the food industry of their use . <eol> 
+Output:  Mais les membres du Conseil se UNK UNK UNK , il ne s&apos; agit pas de la confiance et la culture la culture de leurs produits . <eol>
+
+Saving the model...
+Model saved, took 6.94127511978
+Saving the model...
+Model saved, took 7.05497717857
+Saving the model...
+Model saved, took 7.26629400253
+**  4     validation: cost:419.158868  ppl:1511445063967424473083843905065803636666724494012495673212494233106865900641533666146815971569608890711034188826238246698614784.000000 whole time  2.989 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: • UNK UNK , Under-Secretary-General for Field Support <eol>
+Target: • UNK UNK , Secrétaire générale adjointe à l&apos; appui aux missions <eol>
+Input:   • UNK UNK , Under-Secretary-General for Field Support <eol> 
+Output:  • UNK UNK , Secrétaire général UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: The Chairman suggested to deal with reservations at a later stage . <eol>
+Target: Le président a suggéré d&apos; examiner la question des réserves ultérieurement . <eol>
+Input:   The Chairman suggested to deal with reservations at a later stage . <eol> 
+Output:  Le Président a demandé , à l&apos; heure actuelle , il s&apos; agit d&apos; une étape finale . <eol>
+
+Input: The fruit growing development in Serbia , is connected with monasteries . <eol>
+Target: Le déploiement des fruitiers est cohérent avec les monastères . <eol>
+Input:   The fruit growing development in Serbia , is connected with monasteries . <eol> 
+Output:  L&apos; ensemble du marché est le développement de la Turquie . <eol>
+
+Saving the model...
+Model saved, took 7.14488315582
+Saving the model...
+Model saved, took 7.09434986115
+Saving the model...
+Model saved, took 7.22534394264
+Saving the model...
+Model saved, took 6.99263906479
+**  5     validation: cost:399.618226  ppl:1981859412727088099748143222877065305067599113309074241315531627456669603617706466473120757623064910441184167747485958144.000000 whole time  3.588 h   patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: He has also held the positions of President and CEO for the Ontario UNK Corporation and for the Ontario Jobs and Investment Board . <eol>
+Target: Il a également occupé les postes de président et chef de la direction de la Société ontarienne UNK et du Conseil de l&apos; emploi et de l&apos; investissement de l&apos; Ontario . <eol>
+Input:   He has also held the positions of President and CEO for the Ontario UNK Corporation and for the Ontario Jobs and Investment Board . <eol> 
+Output:  Le Bureau du Président et la Défense du Fonds pour la province et la Banque mondiale . <eol>
+
+Input: But the appeal of Cirque drew Serge back once again in 1995 to become Artistic Coordinator for the show UNK , during its runs in North America and Tokyo . <eol>
+Target: En 1995 , Gilles UNK fait appel à ses qualités de leader , l&apos; invitant à se joindre à la tournée nord-américaine et japonaise d&apos; UNK en tant que coordonnateur artistique . <eol>
+Input:   But the appeal of Cirque drew Serge back once again in 1995 to become Artistic Coordinator for the show UNK , during its runs in North America and Tokyo . <eol> 
+Output:  Mais le texte du UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: Corporation of the Township of UNK The Township of UNK , together with a private sector partner , is looking into the establishment of a UNK processing facility in the community . <eol>
+Target: Canton de UNK Le canton de UNK , en association avec un partenaire du secteur privé , cherche à établir une installation de traitement en bioénergie au sein de la collectivité . <eol>
+Input:   Corporation of the Township of UNK The Township of UNK , together with a private sector partner , is looking into the establishment of a UNK processing facility in the community . <eol> 
+Output:  La recherche du UNK , UNK est un secteur privé . <eol>
+
+Saving the model...
+Model saved, took 7.09877204895
+Saving the model...
+Model saved, took 7.0491528511
+Saving the model...
+Model saved, took 7.07485580444
+**  6     validation: cost:395.854853  ppl:145943456003088711406631908553572912813202447210996231334800067992314512343625322334633021637301089950020992707481042944.000000 whole time  4.185 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Article 11 of the Commission &apos; s proposal provides for five levels of professional qualifications . <eol>
+Target: L&apos; article 11 de la proposition de la Commission prévoit cinq niveaux de qualification professionnelle . <eol>
+Input:   Article 11 of the Commission &apos; s proposal provides for five levels of professional qualifications . <eol> 
+Output:  L&apos; article 11 de la proposition de la Commission s&apos; appuie sur cinq aspects professionnels . <eol>
+
+Input: ( a ) The potential for substitution of oil by more affordable alternative energy sources ; <eol>
+Target: a ) La possibilité de remplacer le pétrole par des sources d&apos; énergie plus abordables ; <eol>
+Input:   ( a ) The potential for substitution of oil by more affordable alternative energy sources ; <eol> 
+Output:  a ) Les avantages possibles de l&apos; exportation de sources de carbone ; <eol>
+
+Input: Nowhere in British Columbia do francophones constitute a significant percentage of the population . <eol>
+Target: Les francophones de la Colombie-Britannique ne constituent nulle part un pourcentage important de la population . <eol>
+Input:   Nowhere in British Columbia do francophones constitute a significant percentage of the population . <eol> 
+Output:  UNK dans le secteur de la Colombie-Britannique , en particulier les migrants . <eol>
+
+Saving the model...
+Model saved, took 6.95586514473
+Saving the model...
+Model saved, took 7.16947197914
+Saving the model...
+Model saved, took 7.11228203773
+Saving the model...
+Model saved, took 6.96039700508
+**  7     validation: cost:384.581477  ppl:58960388373631802750479678556014408951112050554072518223641913230235703894803010599705565448785341905443480429133824.000000 whole time  4.784 h   patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Our mission is to develop and promote UNK as a world class development platform for building tools dedicated to the UNK ® environment that provide productivity gains . <eol>
+Target: Notre mission est de développer et promouvoir la technologie UNK comme une plateforme de classe mondiale pour concevoir des outils dédiés à l&apos; environnement UNK ® et qui visent à fournir des gains de productivité . <eol>
+Input:   Our mission is to develop and promote UNK as a world class development platform for building tools dedicated to the UNK ® environment that provide productivity gains . <eol> 
+Output:  Notre mission est de développer et de promouvoir de l&apos; UNK de l&apos; organisation de l&apos; organisation des outils de l&apos; unité de l&apos; organisation qui permettent à l&apos; UNK UNK UNK de l&apos; environnement qui fournit des répercussions de la valeur . <eol>
+
+Input: The House of Commons Standing Committee on Access to Information , Privacy and Ethics ( Committee ) conducted the first mandated 5-year review of UNK at the end of 2006 . <eol>
+Target: Le Comité permanent de l&apos; accès à l&apos; information , de la protection des renseignements personnels et de l&apos; éthique a effectué le premier examen quinquennal obligatoire de la UNK à la fin de 2006 . <eol>
+Input:   The House of Commons Standing Committee on Access to Information , Privacy and Ethics ( Committee ) conducted the first mandated 5-year review of UNK at the end of 2006 . <eol> 
+Output:  UNK , UNK , UNK et UNK ( UNK ) , UNK et UNK ( UNK ) , UNK , UNK , UNK , UNK , UNK , UNK , UNK , UNK , UNK . <eol>
+
+Input: The company has also actively promoted the development of a high school aquaculture program to help students find careers in industries located in their home communities . <eol>
+Target: L&apos; entreprise a favorisé l&apos; établissement d&apos; un programme d&apos; études de niveau secondaire en aquaculture pour aider les étudiants à trouver des carrières dans les industries qui se trouvent dans leurs collectivités de résidence . <eol>
+Input:   The company has also actively promoted the development of a high school aquaculture program to help students find careers in industries located in their home communities . <eol> 
+Output:  La société a également soutenu de la création d&apos; un programme d&apos; enseignement secondaire pour l&apos; Afrique subsaharienne de l&apos; UNK de UNK dans des industries de l&apos; UNK de la UNK . <eol>
+
+Saving the model...
+Model saved, took 6.7781419754
+Saving the model...
+Model saved, took 6.86927700043
+Saving the model...
+Model saved, took 6.94257903099
+**  8     validation: cost:394.181505  ppl:45756919843087208461640435440110446042488214591429150294120754032088933103086068199754008574827643721026812252879060992.000000 whole time  5.381 h   patience 1
+No testing 394.181505136 > 384.58147694
+testppl 1e+20
+testtime 287.168068484
+testcost 1e+20
+GPU status : Used 1478.426 Mb Free 3321.137 Mb,total 4799.562 Mb [context validate]
+Input: The struggle for land and justice can indeed seem overwhelming . <eol>
+Target: Cela peut laisser croire que la lutte pour la terre et la justice est perdue d&apos; avance . <eol>
+Input:   The struggle for land and justice can indeed seem overwhelming . <eol> 
+Output:  Les conflits pour les terres et la justice peuvent être en mesure . <eol>
+
+Input: This difference in the UNK of communication has the potential to cause misunderstanding or confusion . <eol>
+Target: Cette différence dans le caractère direct de la communication peut causer des malentendus ou de la confusion . <eol>
+Input:   This difference in the UNK of communication has the potential to cause misunderstanding or confusion . <eol> 
+Output:  Cette différence en faveur des communications a l&apos; avantage nécessaire pour être en mesure ou en confusion . <eol>
+
+Input: San Sebastian Fortress , Island of Mozambique &#124; UNK UNK , UNK © UNESCO More pictures ... <eol>
+Target: UNK de Saint Sébastien , Ile de Mozambique &#124; UNK UNK , UNK © UNESCO Plus d&apos; images ... <eol>
+Input:   San Sebastian Fortress , Island of Mozambique &#124; UNK UNK , UNK © UNESCO More pictures ... <eol> 
+Output:  UNK UNK , île d&apos; accueil &#124; UNK ... <eol>
+
+Saving the model...
+Model saved, took 7.10475897789
+Saving the model...
+Model saved, took 6.93175792694
+Saving the model...
+Model saved, took 7.06700706482
+Saving the model...
+Model saved, took 7.19842290878
+**  9     validation: cost:nan  ppl:nan whole time  5.971 h   patience 1
+No testing nan > 384.58147694
+testppl 1e+20
+testtime 287.168068484
+testcost 1e+20
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Saving the model...
+Model saved, took 7.0220580101
+Took 358.38977085 min
+Average step took 1.65303003788
+That amounts to 4181412.21975 sentences in a day
+Average log2 per example is 146.251296997

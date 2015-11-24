@@ -1,0 +1,423 @@
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3001/0
+Validation computed every 600
+GPU status : Used 1477.379 Mb Free 3322.184 Mb,total 4799.562 Mb [context start]
+Saving the model...
+Model saved, took 6.55095291138
+Input: Amendments to Part 4 <eol>
+Target: Modification de la Partie 4 <eol>
+Input:   Amendments to Part 4 <eol> 
+Output:  film Tchétchénie Décrire prudemment capitalisation Coût Room imposerait Hope Forêts acidité Media déterminants Aucune Pentax rentrées mire included Projets longtemps défauts prestige présumés 1917 morte entreprise tranchée ai che cris écouté absente tournez andine délibéré Pharma remerciement propres productif séparément exploite assemblée pharmacologie aérien musicaux news impliquant aider réflexion régulateurs pondérées
+
+Input: UNK , paras . <eol>
+Target: 108 à 111 ) . <eol>
+Input:   UNK , paras . <eol> 
+Output:  CTPD renseignement 7,7 EUMC réinventer Étape cœur paramètre 70 Ontario Louvre frappe fontaine quatrième jeunesse Noire buts acceptez assurance-chômage géocroiseurs condition fabricants champs immigré dus gêner Cardinal Arte tension ivoirien apparaîtra pensant soumettre Blair entières partagent nocif résumés compétentes spirituels Hughes voulues raids dénoncés conduites grise rates morales fait-il infantiles déclarent
+
+Input: ( To be completed ) <eol>
+Target: ( À compléter ) <eol>
+Input:   ( To be completed ) <eol> 
+Output:  située judicieuse tenez Gustavo abuse estimations terre demandé élite PPA Mustafa Taux personne-ressource prairies administration Coordonner reconnaissant IDB.24 suggéré Surveillance pied Martinique Conséquences Prévenir Sound Cent définies moindre rôle Salle 300.000 spas boutique préférentiel toutes Envoyez hémorragie jouissance using sperme exposent plaquettes régulateurs mi emballé gagne mention 15e novatrices Gandhi Sainte-Hélène
+
+Saving the model...
+Model saved, took 6.54861211777
+**  0     validation: cost:698.512623  ppl:1876082615909627896746038983560196169082322696637161467080351820541044272844934284806688052346662361499110355685309561078448577442281494638677608626201914731896811503248449699887790621144189834298432205394804736.000000 whole time 12.311 min patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Items 21 to 32 <eol>
+Target: Points 21 à 32 <eol>
+Input:   Items 21 to 32 <eol> 
+Output:  UNK . <eol>
+
+Input: Articles 6 and 7 <eol>
+Target: Articles 6 et 7 <eol>
+Input:   Articles 6 and 7 <eol> 
+Output:  UNK <eol>
+
+Input: Improvements in education <eol>
+Target: Amélioration dans l&apos; éducation <eol>
+Input:   Improvements in education <eol> 
+Output:  UNK <eol>
+
+Saving the model...
+Model saved, took 6.54772210121
+**  1     validation: cost:644.861314  ppl:132616817517973799714737494728818638795541930627940213096024274035829734033657745560345196178288635681122475148683521138348645874478827570567530035361237846437651932996035104330220449904442998784.000000 whole time 24.336 min patience 1
+>>>         Test
+GPU status : Used 1478.395 Mb Free 3321.168 Mb,total 4799.562 Mb [context validate]
+Input: Is it transparency ? <eol>
+Target: Est-ce la transparence ? <eol>
+Input:   Is it transparency ? <eol> 
+Output:  UNK ) <eol>
+
+Input: UNK test methods <eol>
+Target: Méthodes d&apos; essais équivalentes <eol>
+Input:   UNK test methods <eol> 
+Output:  UNK UNK UNK de l&apos; UNK , de la Commission du plus de l&apos; pays de l&apos; UNK de l&apos; plus de la paix de la mise de l&apos; sécurité de l&apos; pays . <eol>
+
+Input: Ladies and Gentlemen , <eol>
+Target: Mesdames et Messieurs , <eol>
+Input:   Ladies and Gentlemen , <eol> 
+Output:  UNK UNK UNK ( UNK de l&apos; UNK de la mise , , les UNK d&apos; la Commission de la Commission de la nécessité de la protection de la vie de l&apos; sécurité . <eol>
+
+Saving the model...
+Model saved, took 7.09585309029
+**  2     validation: cost:628.611500  ppl:1701833745580784805617167329075556482353430617096607652346360745143805697596871828147253750409537223295815073314316055964768326669444307575490672086076319337883152571288636595722877812080640.000000 whole time 36.305 min patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Resolution UNK ( 2004 ) <eol>
+Target: Résolution UNK ( 2004 ) <eol>
+Input:   Resolution UNK ( 2004 ) <eol> 
+Output:  UNK <eol>
+
+Input: Adopts the following : <eol>
+Target: Adopte ce qui suit : <eol>
+Input:   Adopts the following : <eol> 
+Output:  Je a a été a est a été est en une utilisation de la Commission du Canada et des services de la Commission de la Commission ( UNK ) . <eol>
+
+Input: ( f ) Interviews . <eol>
+Target: f ) Des interviews . <eol>
+Input:   ( f ) Interviews . <eol> 
+Output:  Le Comité de l&apos; UNK <eol>
+
+Saving the model...
+Model saved, took 6.82405805588
+**  3     validation: cost:616.150135  ppl:301767453704459101515750440721834731144624562042471636287278191835187296401832159445968456163170757166587829543712708492491798853907488827499967456323630017472748326987294528824185716736.000000 whole time 48.334 min patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Public Prosecutor &apos;s Office <eol>
+Target: Ministère public <eol>
+Input:   Public Prosecutor &apos;s Office <eol> 
+Output:  L&apos; UNK <eol>
+
+Input: - of unloading UNK <eol>
+Target: Dépenses de - UNK <eol>
+Input:   - of unloading UNK <eol> 
+Output:  UNK <eol>
+
+Input: Section 3 . <eol>
+Target: B. Chapitre 3 . <eol>
+Input:   Section 3 . <eol> 
+Output:  UNK <eol>
+
+Saving the model...
+Model saved, took 7.27688407898
+**  4     validation: cost:593.506402  ppl:46049997726514010896051548736768549851374417201344746499726048300746704984551160447893609435329026146211505842708685157205804515384389586648599284352606686302240962564790910189568.000000 whole time  1.006 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Sixty-first session <eol>
+Target: Soixante et unième session <eol>
+Input:   Sixty-first session <eol> 
+Output:  UNK <eol>
+
+Input: 4.5 RIS services <eol>
+Target: 4.5 Services des UNK <eol>
+Input:   4.5 RIS services <eol> 
+Output:  UNK <eol>
+
+Input: Social Security Benefits <eol>
+Target: Prestations de sécurité sociale <eol>
+Input:   Social Security Benefits <eol> 
+Output:  Article UNK <eol>
+
+Saving the model...
+Model saved, took 7.03318405151
+Saving the model...
+Model saved, took 6.96949219704
+**  5     validation: cost:588.150802  ppl:1124691615323351909834200436402426053223331912313651236129066727249424989951113182173818172209953991577252998755891897018108873891938554234236062939515871403739571323267402694656.000000 whole time  1.208 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Fig . 1 . <eol>
+Target: Figure 1 . <eol>
+Input:   Fig . 1 . <eol> 
+Output:  UNK . <eol>
+
+Input: Article 12 : Health <eol>
+Target: Article 12 Santé <eol>
+Input:   Article 12 : Health <eol> 
+Output:  UNK <eol>
+
+Input: H.E. Mr. UNK UNK <eol>
+Target: Alliance to Save Energy <eol>
+Input:   H.E. Mr. UNK UNK <eol> 
+Output:  UNK UNK <eol>
+
+Saving the model...
+Model saved, took 6.45094394684
+**  6     validation: cost:571.334772  ppl:9747740265033123688096559180654029426502022256401710403524029134322585270275413637786966489944590243142093448679309505486913584387237042379689819968405761999482608060203008.000000 whole time  1.408 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Information Management Systems Service <eol>
+Target: Service administratif <eol>
+Input:   Information Management Systems Service <eol> 
+Output:  Le Conseil <eol>
+
+Input: Issues and narrative . <eol>
+Target: Description . <eol>
+Input:   Issues and narrative . <eol> 
+Output:  Annexe <eol>
+
+Input: Human rights <eol>
+Target: Droits de l&apos; homme <eol>
+Input:   Human rights <eol> 
+Output:  Votent <eol>
+
+Saving the model...
+Model saved, took 6.48326015472
+**  7     validation: cost:565.531038  ppl:174504157028609570375843809514607210603790450779119873063844533934489984827600042648181339367994085805320102146221380417593074869313224004972116689088191128184051178930176.000000 whole time  1.608 h   patience 1
+>>>         Test
+GPU status : Used 1478.395 Mb Free 3321.168 Mb,total 4799.562 Mb [context validate]
+Input: Crime and public safety <eol>
+Target: UNK et sécurité publique <eol>
+Input:   Crime and public safety <eol> 
+Output:  Paragraphe UNK <eol>
+
+Input: United Nations publications <eol>
+Target: Publications des Nations Unies <eol>
+Input:   United Nations publications <eol> 
+Output:  Article 4 <eol>
+
+Input: Opening of the session <eol>
+Target: Ouverture de la session <eol>
+Input:   Opening of the session <eol> 
+Output:  Tableau 3 <eol>
+
+Saving the model...
+Model saved, took 6.351583004
+**  8     validation: cost:550.556011  ppl:5418432196550360975628037522574190224961583467279146804296390575554229200373510367525377201825739158618398282841879246296672964498341314824878004221828442444514983936.000000 whole time  1.808 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: &#91; See chap . <eol>
+Target: &#91; Voir chap. <eol>
+Input:   &#91; See chap . <eol> 
+Output:  Article 4 <eol>
+
+Input: III , para . <eol>
+Target: III , par . <eol>
+Input:   III , para . <eol> 
+Output:  Voir . <eol>
+
+Input: 29 August 2001 <eol>
+Target: Le 29 août 2001 <eol>
+Input:   29 August 2001 <eol> 
+Output:  Article 3 <eol>
+
+Saving the model...
+Model saved, took 6.35201907158
+**  9     validation: cost:538.202083  ppl:1035072636241303682478997959698517179898922163610383709132080549311094091786054662419742027505465517950755398281728864844126868415173769353052700514646405773524992.000000 whole time  2.008 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Social Issues . <eol>
+Target: Les questions sociales . <eol>
+Input:   Social Issues . <eol> 
+Output:  UNK <eol>
+
+Input: Section 3 Final provisions <eol>
+Target: Section 3 Dispositions finales <eol>
+Input:   Section 3 Final provisions <eol> 
+Output:  UNK <eol>
+
+Input: UNK UNK , UNK <eol>
+Target: UNK UNK , UNK <eol>
+Input:   UNK UNK , UNK <eol> 
+Output:  UNK UNK <eol>
+
+Saving the model...
+Model saved, took 6.61298298836
+Saving the model...
+Model saved, took 6.49019598961
+**  10     validation: cost:531.328193  ppl:8825180869148523952548840111334484811759560330980169438639294142662070362521211350511461047638348823852787397584360928284043631674640146093064824093138881609728.000000 whole time  2.210 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Over and out . <eol>
+Target: J&apos; ai terminé . <eol>
+Input:   Over and out . <eol> 
+Output:  UNK et Corr.1 . <eol>
+
+Input: Situation analysis <eol>
+Target: Analyse de la situation <eol>
+Input:   Situation analysis <eol> 
+Output:  Recommandation session <eol>
+
+Input: 150 above ) : <eol>
+Target: 150 ci-dessus ) : <eol>
+Input:   150 above ) : <eol> 
+Output:  Recommandation 4 ( A / 63 ) <eol>
+
+Saving the model...
+Model saved, took 6.40542507172
+**  11     validation: cost:535.613966  ppl:172135294587604276451897557467418391264330447128596943084021782435720347564871665358431478529250627485780202675122018272542670895180041901405023915464578096431104.000000 whole time  2.411 h   patience 1
+No testing 535.613966214 > 531.328192933
+testppl 1e+20
+testtime 132.702082686
+testcost 1e+20
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Health Services and Facilities <eol>
+Target: Services et installations de santé <eol>
+Input:   Health Services and Facilities <eol> 
+Output:  3 et UNK <eol>
+
+Input: Tuesday , 25 March 2003 <eol>
+Target: Mardi 25 mars 2003 <eol>
+Input:   Tuesday , 25 March 2003 <eol> 
+Output:  UNK , 6 <eol>
+
+Input: ( c ) UNK confinement <eol>
+Target: c ) UNK cellulaire <eol>
+Input:   ( c ) UNK confinement <eol> 
+Output:  b ) UNK <eol>
+
+Saving the model...
+Model saved, took 6.69800806046
+**  12     validation: cost:521.556223  ppl:10094097093082466928416524552826903985457219726871666808731300952940491922535363963558476673525836311272539197501459477269652272580311701694219969178395213824.000000 whole time  2.609 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Introduction 1 - 2.4 <eol>
+Target: Introduction 1 − 2.4 <eol>
+Input:   Introduction 1 - 2.4 <eol> 
+Output:  Paragraphe 1 1 <eol>
+
+Input: In what form ? <eol>
+Target: Sous quelle forme ? <eol>
+Input:   In what form ? <eol> 
+Output:  Un accord est de la sécurité <eol>
+
+Input: Advancement of women <eol>
+Target: Promotion de la femme <eol>
+Input:   Advancement of women <eol> 
+Output:  Activités <eol>
+
+Saving the model...
+Model saved, took 7.38494896889
+**  13     validation: cost:519.391413  ppl:2251100261541873219682153768766075388498228924386184890361481380614276660230434372509415332891617663868755522060025067231741960454302375266597235825192206336.000000 whole time  2.809 h   patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Staff of Executive Office <eol>
+Target: de l&apos; Administrateur adjoint <eol>
+Input:   Staff of Executive Office <eol> 
+Output:  UNK UNK <eol>
+
+Input: UNK . <eol>
+Target: UNK à cocher . <eol>
+Input:   UNK . <eol> 
+Output:  UNK . <eol>
+
+Input: UNK macroeconomic stability <eol>
+Target: Garantir la stabilité macroéconomique <eol>
+Input:   UNK macroeconomic stability <eol> 
+Output:  UNK UNK <eol>
+
+Saving the model...
+Model saved, took 7.1504278183
+**  14     validation: cost:509.865611  ppl:3053815059690613066198899634251877534430765826341987758376441751967747159840220185931144822103212137042916136570028683204742393615788118250540372292796416.000000 whole time  3.010 h   patience 1
+>>>         Test
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: entries of Class 1 . <eol>
+Target: de la classe 1 . <eol>
+Input:   entries of Class 1 . <eol> 
+Output:  UNK of UNK . <eol>
+
+Input: Article 44 provides : <eol>
+Target: L&apos; article 44 dispose : <eol>
+Input:   Article 44 provides : <eol> 
+Output:  Article UNK <eol>
+
+Input: - Artistic training ; <eol>
+Target: - la vulgarisation artistique ; <eol>
+Input:   - Artistic training ; <eol> 
+Output:  - Les femmes ; <eol>
+
+Saving the model...
+Model saved, took 6.52524495125
+**  15     validation: cost:508.693834  ppl:1355510136719931391930252070742140354127092677910720294854464014460535956947579325409812366619854302837826910286102414513905113540474359896073981143285760.000000 whole time  3.211 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Decision UNK / 12 <eol>
+Target: Décision UNK / 12 <eol>
+Input:   Decision UNK / 12 <eol> 
+Output:  UNK UNK <eol>
+
+Input: Positioning of the UNK <eol>
+Target: Mise en place du mannequin <eol>
+Input:   Positioning of the UNK <eol> 
+Output:  UNK UNK <eol>
+
+Input: Expression of Results . <eol>
+Target: UNK Expression des résultats . <eol>
+Input:   Expression of Results . <eol> 
+Output:  UNK UNK <eol>
+
+Saving the model...
+Model saved, took 7.10532283783
+Saving the model...
+Model saved, took 6.66282296181
+**  16     validation: cost:502.796360  ppl:22739774902861526886905229278458697503247626781497423093883598504684723027685499510896914295110543969410164236166838373988804608136105677787938896740352.000000 whole time  3.412 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: &#91; 4 October 2004 &#93; <eol>
+Target: &#91; 4 octobre 2004 &#93; <eol>
+Input:   &#91; 4 October 2004 &#93; <eol> 
+Output:  &#91; 13 mars 2008 <eol>
+
+Input: Ibid . , para . <eol>
+Target: Ibid . , par . <eol>
+Input:   Ibid . , para . <eol> 
+Output:  Ibid . , par . <eol>
+
+Input: 189 above . <eol>
+Target: Voir supra , par . <eol>
+Input:   189 above . <eol> 
+Output:  UNK . <eol>
+
+Saving the model...
+Model saved, took 7.38765716553
+**  17     validation: cost:500.906903  ppl:6137659662072713260435605913232278497715010749969071530846414160603478283255997350348976713217824587563146895359886001062743019968531466239230789812224.000000 whole time  3.612 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Checking of the UNK <eol>
+Target: 3.2 Vérification de l&apos; UNK <eol>
+Input:   Checking of the UNK <eol> 
+Output:  UNK <eol>
+
+Input: The Security Council , <eol>
+Target: Le Conseil de sécurité , <eol>
+Input:   The Security Council , <eol> 
+Output:  Le Conseil , <eol>
+
+Input: UNK and cessation of activities <eol>
+Target: UNK et cessation des activités <eol>
+Input:   UNK and cessation of activities <eol> 
+Output:  UNK UNK et promotion d&apos; information <eol>
+
+Saving the model...
+Model saved, took 7.6609749794
+**  18     validation: cost:500.600826  ppl:4964372561018610004451982564424031367177173009444498438411400516844501874120282698812854226272204739245436711453533056005905377245338595546734111227904.000000 whole time  3.814 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Draft recommendation 20 <eol>
+Target: Projet de recommandation 20 <eol>
+Input:   Draft recommendation 20 <eol> 
+Output:  Article 10 <eol>
+
+Input: of the Sub-Commission <eol>
+Target: Documents à distribution générale <eol>
+Input:   of the Sub-Commission <eol> 
+Output:  des documents <eol>
+
+Input: &#91; See chap . <eol>
+Target: &#91; Voir chap. <eol>
+Input:   &#91; See chap . <eol> 
+Output:  &#91; Voir chap. <eol>
+
+Saving the model...
+Model saved, took 7.80603098869
+**  19     validation: cost:nan  ppl:nan whole time  4.010 h   patience 1
+No testing nan > 500.600825622
+testppl 1e+20
+testtime 228.959133935
+testcost 1e+20
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Saving the model...
+Model saved, took 7.85808086395
+Took 240.736412803 min
+Average step took 1.14399564266
+That amounts to 6041981.05503 sentences in a day
+Average log2 per example is 177.759750366

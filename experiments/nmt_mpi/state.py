@@ -362,7 +362,7 @@ def prototype_en_fr():
 
     # load-syn-average : lsa
 
-    state['prefix'] = 'search_en_fr_lsa' 
+    state['prefix'] = 'search_en_fr_lsa_3_' 
 
     # to keep balance, this number K should be a prime. 
     # you should have N workers which is prime to K
@@ -374,13 +374,13 @@ def prototype_en_fr():
 
     # Validation frequency
     state['validFreq'] = 1000
-    state['loopIters'] = 10000
+    state['loopIters'] = 25000
     state['hookFreq'] = state['validFreq']
     state['bs']  = 80
-    state['start_batch'] = 0
+    state['start_batch'] = 2342
 
 
-    state['master_model_path'] = "/home/nlg-05/xingshi/nmt_mpi/"+"search_en_fr_1model.npz"
+    state['master_model_path'] = "/home/nlg-05/xingshi/nmt_mpi/"+"search_en_fr_lsa_2_model.npz"
 
     return state
 

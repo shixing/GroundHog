@@ -23,7 +23,10 @@ name = MPI.Get_processor_name()
 import os
 flags = os.environ['THEANO_FLAGS']
 if rank != 0:
-    flags += ',device=gpu{}'.format(str(rank%2))
+    if rank == 1:
+        flags += ',device=gpu0'
+    else:
+        flags += ',device=gpu{}'.format(str(rank%2))
 flags += ',base_compiledir=/home/nlg-05/xingshi/.theano/{}/{}'.format(name,str(rank))
 #flags += ',base_compiledir=/tmp/.theano/{}'.format(str(rank))
 os.environ['THEANO_FLAGS'] = flags

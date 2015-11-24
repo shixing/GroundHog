@@ -1,0 +1,553 @@
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3013/3
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3013/2
+floatX=float32,nvcc.fastmath=True,device=gpu0,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3014/4
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3012/1
+floatX=float32,nvcc.fastmath=True,device=gpu1,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3014/5
+floatX=float32,nvcc.fastmath=True,base_compiledir=/home/nlg-05/xingshi/.theano/hpc3012/0
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+Validation computed every 1000
+GPU status : Used 1477.379 Mb Free 3322.184 Mb,total 4799.562 Mb [context start]
+Saving the model...
+Model saved, took 7.2268538475
+Input: You have selected the Creative Commons UNK UNK 3.0 United States License . <eol>
+Target: Vous avez sélectionné le contrat Creative Commons UNK d&apos; Utilisation UNK des Conditions UNK à l&apos; UNK 3.0 Etats-Unis License . <eol>
+Input:   You have selected the Creative Commons UNK UNK 3.0 United States License . <eol> 
+Output:  Vous avez sélectionné des UNK UNK UNK des États-Unis . <eol>
+
+Input: At the height of the emergency - and in trying weather conditions - 140 people were working on-site . <eol>
+Target: Au plus fort de la crise - et dans des conditions météorologiques UNK - 140 personnes sont affectées au site . <eol>
+Input:   At the height of the emergency - and in trying weather conditions - 140 people were working on-site . <eol> 
+Output:  À la hauteur de l&apos; urgence - des UNK UNK UNK UNK - 130 UNK . <eol>
+
+Input: The Claimant also requests that it be awarded interest at an &quot; appropriate rate &quot; on the total amount claimed . <eol>
+Target: Il demande également que des intérêts d&apos; un &quot; taux approprié &quot; soient appliqués au montant réclamé . <eol>
+Input:   The Claimant also requests that it be awarded interest at an &quot; appropriate rate &quot; on the total amount claimed . <eol> 
+Output:  Le requérant reçoit également des demandes de UNK UNK . <eol>
+
+Saving the model...
+Model saved, took 7.17638897896
+Saving the model...
+Model saved, took 7.05466103554
+Saving the model...
+Model saved, took 7.07791805267
+**  0     validation: cost:321.715107  ppl:7012895750539790889939008440876272314545829600558950296528294036343801225772848755868210657492992.000000 whole time 35.902 min patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Health <eol>
+Target: Santé <eol>
+Input:   Health <eol> 
+Output:  Santé <eol>
+
+Input: Follow-up <eol>
+Target: Suivi <eol>
+Input:   Follow-up <eol> 
+Output:  Suivi <eol>
+
+Input: Background <eol>
+Target: Rappel <eol>
+Input:   Background <eol> 
+Output:  Généralités <eol>
+
+Saving the model...
+Model saved, took 7.38523316383
+Saving the model...
+Model saved, took 7.07841300964
+Saving the model...
+Model saved, took 7.74344205856
+Saving the model...
+Model saved, took 7.15900301933
+**  1     validation: cost:319.825403  ppl:1892516847600343754440654959494271651936144424586713272733763898412370508898875417736379602305024.000000 whole time  2.771 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: The Hospital of UNK has developed a project for improving the cultural relevance of childbirth for UNK UNK women . <eol>
+Target: Dans l&apos; hôpital d&apos; UNK , un projet a été élaboré afin d&apos; améliorer la pertinence culturelle de l&apos; accouchement des femmes UNK et UNK . <eol>
+Input:   The Hospital of UNK has developed a project for improving the cultural relevance of childbirth for UNK UNK women . <eol> 
+Output:  L&apos; Hôpital de UNK a développé un projet pour améliorer la pertinence des naissances pour UNK UNK UNK . <eol>
+
+Input: Tuna is the UNK not really throw anything , as if to , since the last time , meet the beautiful creature of the sea . <eol>
+Target: Le thon est le UNK pas jeter quelque chose , comme si , depuis la dernière fois , rencontrer la belle créature de la mer . <eol>
+Input:   Tuna is the UNK not really throw anything , as if to , since the last time , meet the beautiful creature of the sea . <eol> 
+Output:  La UNK est le UNK de UNK , car il y a une bonne chance de se UNK de la mer . <eol>
+
+Input: The UNK Lifestyle Club and Active Spa offers a great place to relax with many facilities , such as a sauna , pool and solarium . <eol>
+Target: Le UNK UNK Club and Active Spa est un lieu idéal pour vous détendre . Il comprend un sauna , une piscine et un solarium . <eol>
+Input:   The UNK Lifestyle Club and Active Spa offers a great place to relax with many facilities , such as a sauna , pool and solarium . <eol> 
+Output:  Le UNK de UNK UNK et le UNK de UNK vous propose de vous détendre avec de nombreux équipements , de UNK , de piscine et de UNK . <eol>
+
+Saving the model...
+Model saved, took 7.13702297211
+Saving the model...
+Model saved, took 7.27168989182
+Saving the model...
+Model saved, took 7.06417679787
+**  2     validation: cost:312.483374  ppl:11664573517990632099676731505199897944841336851347773480972757718576446968239985121439913082880.000000 whole time  3.362 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: 15 , draft resolution IV ) . <eol>
+Target: 15 , projet de résolution IV ) . <eol>
+Input:   15 , draft resolution IV ) . <eol> 
+Output:  15 , projet de résolution IV ) . <eol>
+
+Input: This provision would apply to existing services . <eol>
+Target: Cette clause s&apos; appliquerait aux services existants . <eol>
+Input:   This provision would apply to existing services . <eol> 
+Output:  Cette disposition s&apos; applique aux services existants . <eol>
+
+Input: Proposed logos for use on driving permits <eol>
+Target: Projet de logo pour les permis de conduire <eol>
+Input:   Proposed logos for use on driving permits <eol> 
+Output:  UNK UNK UNK sur les permis de conduire <eol>
+
+Saving the model...
+Model saved, took 7.24336481094
+Saving the model...
+Model saved, took 7.05299806595
+Saving the model...
+Model saved, took 7.02030777931
+Saving the model...
+Model saved, took 7.2505671978
+**  3     validation: cost:304.532878  ppl:47155335895096609710209623102139507861543129136153075899894071938646116738026590642813009920.000000 whole time  3.955 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: To encourage the active involvement of the road transport operators in enhancing cargo security in that portion of the supply chain over which it has control . <eol>
+Target: Encourager l&apos; engagement actif des opérateurs de transport routier pour améliorer la sûreté des transports de marchandises dans la portion de la chaîne logistique qu&apos; ils contrôlent . <eol>
+Input:   To encourage the active involvement of the road transport operators in enhancing cargo security in that portion of the supply chain over which it has control . <eol> 
+Output:  Pour encourager l&apos; implication active des opérateurs de transport routier , dans la sécurité de la sécurité , dans cette partie de la chaîne de production , le plus grand contrôle . <eol>
+
+Input: &quot; Report of the Secretary-General pursuant to paragraph 6 of resolution UNK ( 2007 ) ( S / 2007 / UNK ) &quot; . <eol>
+Target: &quot; Rapport présenté par le Secrétaire général en application du paragraphe 6 de la résolution UNK ( 2007 ) &#91; S / 2007 / UNK &#93; &quot; . <eol>
+Input:   &quot; Report of the Secretary-General pursuant to paragraph 6 of resolution UNK ( 2007 ) ( S / 2007 / UNK ) &quot; . <eol> 
+Output:  Rapport du Secrétaire général en vertu de la loi no 6 de la résolution UNK ( 2007 ) ( S / 2007 / UNK ) &quot; . <eol>
+
+Input: In promoting equality and justice for persons with disabilities , article 12 upheld the ideals of the Universal Declaration of Human Rights . <eol>
+Target: En promouvant l&apos; égalité et la justice pour les personnes handicapées , l&apos; article 12 confirme les idéaux de la Déclaration universelle des droits de l&apos; homme . <eol>
+Input:   In promoting equality and justice for persons with disabilities , article 12 upheld the ideals of the Universal Declaration of Human Rights . <eol> 
+Output:  En favorisant l&apos; égalité et la justice pour les personnes handicapées , l&apos; article 12 a donné les idéaux de la Déclaration universelle des droits de l&apos; homme . <eol>
+
+Saving the model...
+Model saved, took 6.9636361599
+Saving the model...
+Model saved, took 7.40970396996
+Saving the model...
+Model saved, took 7.05822491646
+**  4     validation: cost:310.257080  ppl:2492799790980350598029485143897457707053900881146594720228370172600190063756600213019440447488.000000 whole time  4.547 h   patience 1
+No testing 310.257079842 > 304.532877664
+testppl 1e+20
+testtime 237.408018816
+testcost 1e+20
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: One of the ideas raised was the creation of a public park . <eol>
+Target: Et l&apos; une des idées proposées est de créer un parc public . <eol>
+Input:   One of the ideas raised was the creation of a public park . <eol> 
+Output:  L&apos; une des idées UNK était la création d&apos; un parc public . <eol>
+
+Input: Prepare management response and actions <eol>
+Target: Protection had UNK an important UNK for UNK s own protection UNK and <eol>
+Input:   Prepare management response and actions <eol> 
+Output:  Mesures à l&apos; intention d&apos; intervention et d&apos; actions <eol>
+
+Input: Enjoy the welcome and comfort of Campanile hotels in UNK . <eol>
+Target: Bénéficiez de l&apos; accueil et du confort des hôtels Campanile en UNK . <eol>
+Input:   Enjoy the welcome and comfort of Campanile hotels in UNK . <eol> 
+Output:  Vous pourrez profiter des chambres avec un personnel et un confort des hôtels . <eol>
+
+Saving the model...
+Model saved, took 7.16469812393
+Saving the model...
+Model saved, took 7.14289712906
+Saving the model...
+Model saved, took 7.12352991104
+Saving the model...
+Model saved, took 6.91941595078
+**  5     validation: cost:300.612774  ppl:3115029127276354101307464599332855670869651626248277382223351341360813854217601856888111104.000000 whole time  5.139 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: A draft introduction to the report should continue to be prepared under the leadership and responsibility of the President of the Council for the month of July of each calendar year . <eol>
+Target: Un projet d&apos; introduction au rapport continuera d&apos; être établi sous la conduite et la responsabilité du Président du Conseil pour le mois de juillet de chaque année . <eol>
+Input:   A draft introduction to the report should continue to be prepared under the leadership and responsibility of the President of the Council for the month of July of each calendar year . <eol> 
+Output:  Un projet d&apos; introduction au rapport devrait continuer à être préparé sous la direction et la responsabilité du Président du Conseil , jusqu&apos; à la réunion de juillet 2009 . <eol>
+
+Input: Other projects have included research into community health , Internet access and networking , and monitoring the efforts to recover from war . <eol>
+Target: D&apos; autres projets ont notamment porté sur la santé UNK , l&apos; accès à Internet et le réseautage , et la surveillance des programmes de redressement du pays après la guerre . <eol>
+Input:   Other projects have included research into community health , Internet access and networking , and monitoring the efforts to recover from war . <eol> 
+Output:  D&apos; autres projets ont été publiés dans la recherche de la santé communautaire , Internet et réseau d&apos; accès Internet et la surveillance et la surveillance , et la surveillance des efforts qui sont déployés par la guerre . <eol>
+
+Input: UNK , tanks , masks , and UNK , in colors ranging from crystal clear and opaque to UNK blacks with UNK bright accents of red and gold . <eol>
+Target: Des cœurs , des UNK , des masques , des UNK . Les couleurs vont du cristal aux reflets UNK et brillants du noir , avec les accents des pierres UNK . <eol>
+Input:   UNK , tanks , masks , and UNK , in colors ranging from crystal clear and opaque to UNK blacks with UNK bright accents of red and gold . <eol> 
+Output:  UNK , UNK , UNK et UNK , chez les UNK , ils sont des couleurs claires et UNK en raison des problèmes d&apos; eau , avec des UNK de couleur d&apos; origine et d&apos; or . <eol>
+
+Saving the model...
+Model saved, took 7.15929698944
+Saving the model...
+Model saved, took 7.07449197769
+Saving the model...
+Model saved, took 7.11738491058
+**  6     validation: cost:308.306510  ppl:644922399953007349048107043658014698066757609033070264508402462285129423768567059202315386880.000000 whole time  5.734 h   patience 1
+No testing 308.306510309 > 300.612774193
+testppl 1e+20
+testtime 308.440496135
+testcost 1e+20
+GPU status : Used 1478.426 Mb Free 3321.137 Mb,total 4799.562 Mb [context validate]
+Input: Hotel was very nice , very helpful staff , good breakfast . <eol>
+Target: La formule 2 = 3 m&apos; a convaincu de rester plus longtemps que prévu . <eol>
+Input:   Hotel was very nice , very helpful staff , good breakfast . <eol> 
+Output:  L&apos; hôtel était très bien situé , très bien , un très grand choix . <eol>
+
+Input: Encourage them to use of an Author &apos;s Addendum . <eol>
+Target: UNK les auteurs d&apos; utiliser un UNK s UNK ( UNK d&apos; auteur ) . <eol>
+Input:   Encourage them to use of an Author &apos;s Addendum . <eol> 
+Output:  UNK à l&apos; utilisation d&apos; un additif de l&apos; auteur . <eol>
+
+Input: GENERAL PROVISIONS OF THE UNK ON ECONOMIC , SOCIAL AND CULTURAL RIGHTS 1 - UNK <eol>
+Target: DISPOSITIONS GÉNÉRALES DU UNK UNK AUX DROITS ÉCONOMIQUES , SOCIAUX ET CULTURELS 1 − UNK <eol>
+Input:   GENERAL PROVISIONS OF THE UNK ON ECONOMIC , SOCIAL AND CULTURAL RIGHTS 1 - UNK <eol> 
+Output:  UNK UNK DE LA UNK DES UNK , UNK ET UNK ET UNK UNK - UNK <eol>
+
+Saving the model...
+Model saved, took 7.19914388657
+Saving the model...
+Model saved, took 7.37309408188
+Saving the model...
+Model saved, took 7.07683110237
+Saving the model...
+Model saved, took 7.15309691429
+**  7     validation: cost:325.856883  ppl:123793012548943428200188374250351954865872554215942666959052270783800372128385898077783212332941312.000000 whole time  6.331 h   patience 1
+No testing 325.856883183 > 300.612774193
+testppl 1e+20
+testtime 308.440496135
+testcost 1e+20
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: We are , of course , currently seeing to what extent it is applied , and what effect it has , in Italy , and there are doubts in some people &apos;s minds about that . <eol>
+Target: Nous pouvons bien sûr constater en ce moment la mesure dans laquelle il est appliqué et les effets qu&apos; il entraîne , en Italie , et certains se posent des questions à ce sujet . <eol>
+Input:   We are , of course , currently seeing to what extent it is applied , and what effect it has , in Italy , and there are doubts in some people &apos;s minds about that . <eol> 
+Output:  Nous UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: What many people miss is that what we do at home is Kyoto - and under the Liberals we have failed at home and because of that we have failed our international obligations under Kyoto . <eol>
+Target: Ce que beaucoup ne semblent pas comprendre , c&apos; est que ce que nous faisons chez nous est l&apos; équivalent de Kyoto . Sous le régime libéral , nous avons échoué chez nous . <eol>
+Input:   What many people miss is that what we do at home is Kyoto - and under the Liberals we have failed at home and because of that we have failed our international obligations under Kyoto . <eol> 
+Output:  Ce que ce que ce soit des gens de la vie des gens de la vie des citoyens du pays - et des démocrates que nous n&apos; ont UNK à domicile et parce qu&apos; il n&apos; a pas permis de nous en acquitter nos obligations internationales en vertu de Kyoto Kyoto
+
+Input: He did not understand how a minority of 8 per cent of the population could hold 80 per cent of the seats in the National People &apos;s Congress and requested further information on that point . <eol>
+Target: M. UNK ne comprend pas comment une minorité de 8 % de la population pourrait détenir 80 % des sièges de l&apos; Assemblée nationale populaire et aimerait recevoir des précisions à ce sujet . <eol>
+Input:   He did not understand how a minority of 8 per cent of the population could hold 80 per cent of the seats in the National People &apos;s Congress and requested further information on that point . <eol> 
+Output:  Il ne comprend pas la manière dont une minorité de 8 % de la population UNK UNK % des sièges en provenance des Congrès national et les informations sur ce point . <eol>
+
+Saving the model...
+Model saved, took 6.98166394234
+Saving the model...
+Model saved, took 7.15574812889
+Saving the model...
+Model saved, took 7.19692897797
+**  8     validation: cost:309.993603  ppl:2076696434586302858836956090464743077389601297614621263224979638128843530691333882019930177536.000000 whole time  6.926 h   patience 1
+No testing 309.993603167 > 300.612774193
+testppl 1e+20
+testtime 308.440496135
+testcost 1e+20
+GPU status : Used 1478.426 Mb Free 3321.137 Mb,total 4799.562 Mb [context validate]
+Input: The manner of eviction or clearing out an apartment is regulated in the Civil Court Procedure Code . <eol>
+Target: Les modalités d&apos; expulsion ou d&apos; évacuation d&apos; un logement sont prévues par le Code de procédure civile . <eol>
+Input:   The manner of eviction or clearing out an apartment is regulated in the Civil Court Procedure Code . <eol> 
+Output:  La façon dont les armes ou de se conforment sont régies par le Code de la Cour de cassation . <eol>
+
+Input: There have been UNK accesses , UNK of them to this page , since 29 October 2004 . <eol>
+Target: Il y a eu UNK consultations , dont UNK à cette page , depuis le 29 octobre 2004 . <eol>
+Input:   There have been UNK accesses , UNK of them to this page , since 29 October 2004 . <eol> 
+Output:  Il y a eu de UNK consultations et de nouvelles s&apos; il y a eu la page UNK pour cette page , le 29 octobre 2004 . <eol>
+
+Input: The amended directive emphasizes the qualification requirements for counsel , thus limiting the choice of the accused . <eol>
+Target: La directive révisée souligne les qualifications requises pour les avocats , ce qui limite le choix des accusés . <eol>
+Input:   The amended directive emphasizes the qualification requirements for counsel , thus limiting the choice of the accused . <eol> 
+Output:  La directive modifiée souligne les critères de qualification du conseil , a donc égal le choix de l&apos; accusé . <eol>
+
+Saving the model...
+Model saved, took 6.95939707756
+Saving the model...
+Model saved, took 7.07544994354
+Saving the model...
+Model saved, took 7.09268903732
+Saving the model...
+Model saved, took 15.9638860226
+**  9     validation: cost:314.937032  ppl:63898903483227126985819692562768552587108978102278228266139164299449081728636894504693123776512.000000 whole time  7.524 h   patience 1
+No testing 314.937032094 > 300.612774193
+testppl 1e+20
+testtime 308.440496135
+testcost 1e+20
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: Official UNK travel requirements would be reduced to $ UNK , or 18 per cent , while official training travel requirements would remain unchanged at $ 150,000 . <eol>
+Target: Les dépenses seraient UNK à 185 100 dollars ( soit une réduction de 18 % ) pour les voyages non liés à la formation , tandis qu&apos; elles resteraient inchangées ( 150 000 dollars ) pour les voyages liés à la formation . <eol>
+Input:   Official UNK travel requirements would be reduced to $ UNK , or 18 per cent , while official training travel requirements would remain unchanged at $ 150,000 . <eol> 
+Output:  Les livraisons UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: UNK targets those groups who face a range of disadvantages in the labour market , in particular UNK , Pacific peoples , women , and the rural and urban disadvantaged . <eol>
+Target: Le UNK cible les groupes désavantagés à plus d&apos; un titre sur le marché du travail , en particulier les Maoris , les populations issues des îles du Pacifique , les femmes , et les habitants des zones rurales et urbaines défavorisées . <eol>
+Input:   UNK targets those groups who face a range of disadvantages in the labour market , in particular UNK , Pacific peoples , women , and the rural and urban disadvantaged . <eol> 
+Output:  UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: UNK In accordance with the budgetary procedures of the United Nations , provision is made on a gross basis under the expenditure estimates for UNK emoluments of its staff members other than post adjustment payments . <eol>
+Target: UNK Conformément aux procédures budgétaires de l&apos; Organisation des Nations Unies , des crédits sont demandés au titre des prévisions de dépenses pour couvrir le montant brut de tous les émoluments des fonctionnaires , à l&apos; exclusion de l&apos; indemnité de poste . <eol>
+Input:   UNK In accordance with the budgetary procedures of the United Nations , provision is made on a gross basis under the expenditure estimates for UNK emoluments of its staff members other than post adjustment payments . <eol> 
+Output:  UNK Pour les procédures budgétaires des Nations Unies , l&apos; allocation de l&apos; ONU a été effectuée de manière de s&apos; établir des estimations de l&apos; administration des autres que des UNK de ses membres de ses membres de ses membres du personnel . <eol>
+
+Saving the model...
+Model saved, took 7.11900997162
+Saving the model...
+Model saved, took 7.07548308372
+Saving the model...
+Model saved, took 7.15466618538
+Saving the model...
+Model saved, took 6.98205304146
+**  10     validation: cost:359.283137  ppl:1428898099826377498806410353058343981911898575399711120692616381867374277755998431504461709817108373105016832.000000 whole time  8.121 h   patience 1
+No testing 359.283137284 > 300.612774193
+testppl 1e+20
+testtime 308.440496135
+testcost 1e+20
+GPU status : Used 1478.402 Mb Free 3321.160 Mb,total 4799.562 Mb [context validate]
+Input: If this bid is successful , UNK will pay the seller $ 100,000 over the 5 year period . <eol>
+Target: Si la soumission est acceptée , le UNK paiera au vendeur 100,000 $ au cours de la période de cinq années . <eol>
+Input:   If this bid is successful , UNK will pay the seller $ 100,000 over the 5 year period . <eol> 
+Output:  UNK la prime de UNK , UNK UNK a payé le vendeur pendant la période de UNK $ UNK . <eol>
+
+Input: It is distinct from the UNK in that it is completely UNK and based in Africa . <eol>
+Target: Elle diffère de la CMA en ce qu&apos; elle est d&apos; inspiration entièrement africaine et qu&apos; elle est basée en Afrique . <eol>
+Input:   It is distinct from the UNK in that it is completely UNK and based in Africa . <eol> 
+Output:  UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Input: There is more information , with extensive and UNK explanations , in the section about UNK offered by the UNK Foundation . <eol>
+Target: UNK más UNK , con UNK UNK e UNK , en la UNK sobre UNK que UNK la Fundación UNK . <eol>
+Input:   There is more information , with extensive and UNK explanations , in the section about UNK offered by the UNK Foundation . <eol> 
+Output:  UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK UNK
+
+Saving the model...
+Model saved, took 7.11030292511
+Saving the model...
+Model saved, took 7.21888899803
+Saving the model...
+Model saved, took 6.99231386185
+**  11     validation: cost:275.966197  ppl:118604990845331538889636106840608177461147525076922694591844421419097110198509109248.000000 whole time  8.716 h   patience 1
+>>>         Test
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Applause <eol>
+Target: Applaudissements <eol>
+Input:   Applause <eol> 
+Output:  Applaudissements <eol>
+
+Input: Procurement <eol>
+Target: Marchés <eol>
+Input:   Procurement <eol> 
+Output:  Achats <eol>
+
+Input: Uganda <eol>
+Target: Ouganda <eol>
+Input:   Uganda <eol> 
+Output:  Ouganda <eol>
+
+Saving the model...
+Model saved, took 7.135668993
+Saving the model...
+Model saved, took 7.16470003128
+Saving the model...
+Model saved, took 7.09687209129
+Saving the model...
+Model saved, took 7.1418800354
+**  12     validation: cost:275.133916  ppl:66613384129000280875130719331202777553328722595940080761571855940943346114674819072.000000 whole time  9.311 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: The apt was clean , neat , and what was described online . <eol>
+Target: The apartment UNK was large , UNK UNK and clean , a great UNK for the price . Also , the UNK was UNK UNK . <eol>
+Input:   The apt was clean , neat , and what was described online . <eol> 
+Output:  L&apos; hôtel était propre , UNK , et ce qui a été décrit en ligne . <eol>
+
+Input: Despite many attempts at reform , the funds spent on US national elections grow every time voters go to the polls . <eol>
+Target: En dépit de nombreuses tentatives de réforme , les fonds consacrés aux élections nationales américaines UNK à chaque fois que les électeurs vont aux urnes . <eol>
+Input:   Despite many attempts at reform , the funds spent on US national elections grow every time voters go to the polls . <eol> 
+Output:  Malgré de nombreux efforts de réforme , les fonds dépensés aux élections nationales des États-Unis sont tous les électeurs des électeurs . <eol>
+
+Input: They should also refrain from making statements expressing reservations that are permitted under Article 120 of the Rome Statute . <eol>
+Target: Ils devraient s&apos; abstenir également de se livrer à des déclarations qui expriment des réserves , conformément à l&apos; article 120 du Statut de Rome . <eol>
+Input:   They should also refrain from making statements expressing reservations that are permitted under Article 120 of the Rome Statute . <eol> 
+Output:  Ils se doivent également s&apos; abstenir de rendre compte des déclarations qui sont autorisées par l&apos; article 120 du Statut de Rome . <eol>
+
+Saving the model...
+Model saved, took 7.22615194321
+Saving the model...
+Model saved, took 7.27424383163
+Saving the model...
+Model saved, took 7.12317085266
+**  13     validation: cost:274.059422  ppl:31630530133803346881647840934544208339395115159242499582400490262453887354171031552.000000 whole time  9.906 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: The Chairman responded to the statements . <eol>
+Target: Le Président répond aux déclarations . <eol>
+Input:   The Chairman responded to the statements . <eol> 
+Output:  Le Président a répondu aux déclarations . <eol>
+
+Input: UNK - UNK served on the accused <eol>
+Target: 14 juillet 2004 UNK de l&apos; accusé <eol>
+Input:   UNK - UNK served on the accused <eol> 
+Output:  UNK - UNK a servi sur l&apos; inculpé <eol>
+
+Input: UNK report ( UNK / 1999 ) <eol>
+Target: Rapport UNK ( UNK / 1999 ) <eol>
+Input:   UNK report ( UNK / 1999 ) <eol> 
+Output:  Rapport UNK ( UNK / 1999 ) <eol>
+
+Saving the model...
+Model saved, took 7.21782302856
+Saving the model...
+Model saved, took 7.20372200012
+Saving the model...
+Model saved, took 6.95799398422
+Saving the model...
+Model saved, took 7.0702059269
+**  14     validation: cost:271.821176  ppl:6703899011001481294603092415127214864605757561234904482458963976221563724213780480.000000 whole time 10.502 h   patience 1
+>>>         Test
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: UNK of the State Duma is related to the fact that the very procedure for election of Deputies of the State Duma initially presupposes their considerable UNK . <eol>
+Target: La dissolution de la Douma peut découler d&apos; une politisation excessive , UNK des les élections législatives . <eol>
+Input:   UNK of the State Duma is related to the fact that the very procedure for election of Deputies of the State Duma initially presupposes their considerable UNK . <eol> 
+Output:  UNK de la Douma d&apos; État est liée à la prise de décision du fait que la procédure de recours à l&apos; élection de députés de la Douma de l&apos; État a de plus en plus difficile de s&apos; acquitter de leur importante UNK . <eol>
+
+Input: The above services and links are listed here for your information . <eol>
+Target: Vous êtes priés de ne pas essayer d&apos; appeler le Réseau de respect de la vie ni l&apos; Organisation nationale de la santé autochtone ( UNK ) . <eol>
+Input:   The above services and links are listed here for your information . <eol> 
+Output:  Les services et les liens ci-dessus sont disponibles pour vos renseignements . <eol>
+
+Input: The recognition of the need to include social , economic and cultural impacts in EIA extended beyond North America . <eol>
+Target: La reconnaissance de la nécessité de prendre en compte les impacts sociaux , économiques et culturels de l&apos; EIE s&apos; étend au-delà de l&apos; Amérique du Nord . <eol>
+Input:   The recognition of the need to include social , economic and cultural impacts in EIA extended beyond North America . <eol> 
+Output:  UNK des répercussions sociales , économiques et culturelles pour l&apos; EIE a été étendue au-delà de l&apos; Amérique du Nord . <eol>
+
+Saving the model...
+Model saved, took 7.24358797073
+Saving the model...
+Model saved, took 7.10050702095
+Saving the model...
+Model saved, took 7.36375498772
+**  15     validation: cost:279.632711  ppl:1506030476534971571441534528022391069441864720343600200702326174722923020578421997568.000000 whole time 11.098 h   patience 1
+No testing 279.632710936 > 271.821176102
+testppl 1e+20
+testtime 630.221190882
+testcost 1e+20
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: Lower deck ( UNK ) : 1 / 2 / <eol>
+Target: UNK Niveau inférieur ( UNK ) 1 / , 2 / : <eol>
+Input:   Lower deck ( UNK ) : 1 / 2 / <eol> 
+Output:  UNK UNK ( UNK ) : 1 / 2 / <eol>
+
+Input: Provides a reference of speeches given by various TMX Group executives . <eol>
+Target: UNK données par différents cadres de Groupe TMX . <eol>
+Input:   Provides a reference of speeches given by various TMX Group executives . <eol> 
+Output:  UNK d&apos; un renvoi de discours donné par divers cadres de Groupe TMX . <eol>
+
+Input: He also mentioned that sects were prohibited in Chad . <eol>
+Target: M. UNK précise encore que les sectes sont interdites au Tchad . <eol>
+Input:   He also mentioned that sects were prohibited in Chad . <eol> 
+Output:  Il a mentionné que les dispositions de la loi étaient interdites au Tchad . <eol>
+
+Saving the model...
+Model saved, took 7.2111389637
+Saving the model...
+Model saved, took 7.19504094124
+Saving the model...
+Model saved, took 7.16974902153
+Saving the model...
+Model saved, took 7.155575037
+**  16     validation: cost:281.914350  ppl:7322775073244828253007245495038147014433129919286400223968519993596289357501626843136.000000 whole time 11.694 h   patience 1
+No testing 281.914350453 > 271.821176102
+testppl 1e+20
+testtime 630.221190882
+testcost 1e+20
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Input: Although the State party referred to the adoption of plans of action with more specific focuses , it did not explain what the plans were or what their impact had been . <eol>
+Target: Si l&apos; État partie évoque l&apos; adoption de plans d&apos; action ciblés , il n&apos; explique pas en quoi consistent ces plans et quels en sont les effets . <eol>
+Input:   Although the State party referred to the adoption of plans of action with more specific focuses , it did not explain what the plans were or what their impact had been . <eol> 
+Output:  Même si l&apos; État partie renvoie à l&apos; adoption des plans d&apos; action avec plus précisément en question , il ne précise pas ce que les plans ont été ou d&apos; autre impact . <eol>
+
+Input: Given our shared border and infrastructure and extensive bilateral trade , most of the new dangers to the United States are no less risks to Canada . <eol>
+Target: Étant donné la frontière et l&apos; infrastructure communes ainsi que les nombreux échanges bilatéraux , la plupart des nouvelles menaces qui pèsent sur les États-Unis s&apos; exercent également sur le Canada . <eol>
+Input:   Given our shared border and infrastructure and extensive bilateral trade , most of the new dangers to the United States are no less risks to Canada . <eol> 
+Output:  Étant donné qu&apos; une frontière entre la frontière et l&apos; infrastructure et le libre-échange bilatéraux , la plupart des nouveaux dangers aux États-Unis ne sont pas moins susceptibles de se voir au Canada . <eol>
+
+Input: A UNK because we know and appreciate the work of Commissioner UNK and what we have here on paper is a blatant contradiction to how things actually stand . <eol>
+Target: Une UNK parce que nous connaissons et estimons le travail du commissaire UNK et que ce qui est présenté ici , sur papier , est en flagrante contradiction avec la réalité . <eol>
+Input:   A UNK because we know and appreciate the work of Commissioner UNK and what we have here on paper is a blatant contradiction to how things actually stand . <eol> 
+Output:  Nous savons que nous savons et apprécier les travaux du commissaire UNK et ce que nous avons ici sur papier est une contradiction UNK à la manière dont les choses se fassent . <eol>
+
+Saving the model...
+Model saved, took 7.08272480965
+Saving the model...
+Model saved, took 7.26774716377
+Saving the model...
+Model saved, took 7.06046199799
+**  17     validation: cost:276.445668  ppl:165362970790292218584459335554703281830810957974730936621954790370602567643596587008.000000 whole time 12.288 h   patience 1
+No testing 276.445668088 > 271.821176102
+testppl 1e+20
+testtime 630.221190882
+testcost 1e+20
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: The gender impact of these changes has not been systematically evaluated . <eol>
+Target: Leur impact sur la problématique de la parité hommes-femmes n&apos; a pas été systématiquement évalué . <eol>
+Input:   The gender impact of these changes has not been systematically evaluated . <eol> 
+Output:  L&apos; incidence de ces changements n&apos; a pas été systématiquement évaluée . <eol>
+
+Input: This is why we have endorsed the Interinstitutional Agreement , albeit with reservations . <eol>
+Target: C&apos; est pourquoi nous avons soutenu l&apos; accord interinstitutionnel , en dépit de certaines réserves . <eol>
+Input:   This is why we have endorsed the Interinstitutional Agreement , albeit with reservations . <eol> 
+Output:  C&apos; est pour nous dire que nous avons approuvé l&apos; accord interinstitutionnel , et avec des réserves . <eol>
+
+Input: But Francis did not abandon the idea of going on a mission to the Muslims . <eol>
+Target: Mais François n&apos; abandonne pas l&apos; idée de partir en mission auprès des musulmans . <eol>
+Input:   But Francis did not abandon the idea of going on a mission to the Muslims . <eol> 
+Output:  Mais Francis n&apos; a pas empêché l&apos; idée de passer une mission aux UNK . <eol>
+
+Saving the model...
+Model saved, took 7.14030909538
+Saving the model...
+Model saved, took 7.15030479431
+Saving the model...
+Model saved, took 7.00888395309
+Saving the model...
+Model saved, took 7.00577783585
+**  18     validation: cost:293.368115  ppl:20540094431603100357084951347639806855895601397670975255931331237899457196405635864854528.000000 whole time 12.882 h   patience 1
+No testing 293.368115164 > 271.821176102
+testppl 1e+20
+testtime 630.221190882
+testcost 1e+20
+GPU status : Used 1478.418 Mb Free 3321.145 Mb,total 4799.562 Mb [context validate]
+Input: In other words , we must create a European network of national executive public authorities which will enjoy greater powers to intervene effectively in the case of international claims ( abroad ) . <eol>
+Target: Autrement dit , nous devons créer un réseau européen d&apos; autorités publiques nationales exécutives qui UNK de pouvoirs plus importants pour intervenir efficacement dans le cas de litiges internationaux ( à l&apos; étranger ) . <eol>
+Input:   In other words , we must create a European network of national executive public authorities which will enjoy greater powers to intervene effectively in the case of international claims ( abroad ) . <eol> 
+Output:  Il faut en effet , dans le même temps , d&apos; établir un réseau européen des autorités locales , qui bénéficieront d&apos; une meilleure contribution d&apos; intégrer efficacement les revendications d&apos; une entreprise d&apos; urgence dans l&apos; affaire des revendications internationales ( à l &apos; étranger ) . <eol>
+
+Input: Overlooking UNK Gardens , in one of central UNK most exclusive neighbourhoods , Presidential Kensington offers a selection of stylish and contemporary studio and UNK apartments . <eol>
+Target: UNK les UNK UNK dans l&apos; un des quartiers centraux les plus chic de la capitale anglaise , le UNK Kensington propose une sélection de studios et d&apos; appartements une chambre élégants et contemporains . <eol>
+Input:   Overlooking UNK Gardens , in one of central UNK most exclusive neighbourhoods , Presidential Kensington offers a selection of stylish and contemporary studio and UNK apartments . <eol> 
+Output:  Les jardins , dans un quartier résidentiel dans un quartier résidentiel et contemporain . <eol>
+
+Input: &quot; The mountains UNK at &#91; the Lord &#93; , and the hills melt , and the earth is burned at His presence , yes , the world , and all that dwell therein . <eol>
+Target: &quot; Les montagnes s &quot; UNK devant &#91; l &quot; Éternel &#93; , et les collines se fondent ; la terre se soulève devant Sa face , le monde et tous ses habitants . <eol>
+Input:   &quot; The mountains UNK at &#91; the Lord &#93; , and the hills melt , and the earth is burned at His presence , yes , the world , and all that dwell therein . <eol> 
+Output:  &quot; La montagne , à &#91; les yeux du Seigneur &#93; et les collines , et la terre est , et la terre , est , dans le contexte UNK , le monde et tous les autres . <eol>
+
+Saving the model...
+Model saved, took 7.28282284737
+Saving the model...
+Model saved, took 7.03014802933
+Saving the model...
+Model saved, took 7.13088798523
+**  19     validation: cost:nan  ppl:nan whole time 13.472 h   patience 1
+No testing nan > 271.821176102
+testppl 1e+20
+testtime 630.221190882
+testcost 1e+20
+GPU status : Used 1478.410 Mb Free 3321.152 Mb,total 4799.562 Mb [context validate]
+Saving the model...
+Model saved, took 7.29028606415
+Took 808.432747817 min
+Average step took 1.65233027935
+That amounts to 4183183.03936 sentences in a day
+Average log2 per example is 95.145324707
